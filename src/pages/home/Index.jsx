@@ -4,7 +4,7 @@ import News from "../news/Index";
 function Home() {
   return (
     <div>
-      <News/>
+      Home
     </div>
   );
 }
