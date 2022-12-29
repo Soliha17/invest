@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./style.scss";
 
@@ -17,6 +17,10 @@ import { newsInfos } from "../../utils/newsInfo";
 
 function NewsMain() {
   const [dots, setDots] = useState(false);
+  const navigate = useNavigate();
+  function onSelect(id) {
+    navigate(`/news/${id}`);
+  }
   return (
     <div className="news-main">
       {newsInfos.map((item) => (
@@ -32,7 +36,11 @@ function NewsMain() {
             <span className="action__top flex">
               <img src={plusIcon} alt="" />
               <span className="three-dots">
-                <img src={threeDotsIcon} onClick={()=>setDots(!dots)} alt="" />
+                <img
+                  src={threeDotsIcon}
+                  onClick={() => setDots(!dots)}
+                  alt="proas"
+                />
                 <span
                   className="dots-content"
                   style={dots ? { display: "block" } : { display: "none" }}
@@ -49,7 +57,7 @@ function NewsMain() {
               </span>
             </span>
           </span>
-          <span className="news__text">
+          <span className="news__text" onClick={() => onSelect(item?.id)}>
             <h6 className="f-1619">{item.newsType}</h6>
             <h4 className="f-2431">{item.newsTitle}</h4>
             <p className="f-2024">{item.newsText}</p>

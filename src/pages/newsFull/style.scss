@@ -1,0 +1,103 @@
+@import "../../sass/variables";
+.news-full-main {
+  display: flex;
+  gap: 10px;
+  .back-group {
+    margin-top: 20px;
+    // margin-left: -50px;
+    display: flex;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: $green;
+    cursor: pointer;
+  }
+  .full-text-box {
+    display: block;
+    padding: 15px 19px 0 19px;
+    .full-text {
+      padding: 5px 0;
+      color: $black;
+    }
+  }
+  .comment-group {
+    margin-top: 80px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    h3 {
+      color: $black;
+      margin-bottom: 20px;
+    }
+    textarea {
+      margin-bottom: 20px;
+      padding: 20px;
+      width: 884px;
+      height: 167px;
+      background: $white;
+      color: $darkgrey;
+      border: 1px solid $eeight;
+      outline: none;
+    }
+    .send-btn {
+      margin-bottom: 20px;
+      width: 151px;
+      display: block;
+      margin-left: auto;
+      height: 59px;
+      background: $green;
+      color: $white;
+      border: none;
+      outline: none;
+    }
+    .comments-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 767px;
+      .comment {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .top__comment {
+          gap: 5px;
+          .profile-info {
+            h6 {
+              color: $black;
+            }
+            p {
+              color: $grey;
+              gap: 3px;
+            }
+          }
+        }
+        .middle__comment {
+          p {
+            color: $black;
+          }
+        }
+        .bottom__comment {
+          gap: 20px;
+          p:first-child {
+            color: $grey;
+          }
+          p:last-child {
+            gap: 3px;
+            color: $red;
+          }
+        }
+      }
+      .no-comment {
+        display: block;
+        img {
+          margin-top: 40px;
+        }
+        h4 {
+          margin-top: 66px;
+          text-align: center;
+          color: $black;
+        }
+      }
+    }
+  }
+}

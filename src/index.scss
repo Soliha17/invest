@@ -55,6 +55,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  transition: all 0.3s ease;
 }
 body {
   background: $lightgrey;
@@ -64,6 +65,12 @@ body {
 button,
 img {
   cursor: pointer;
+}
+img {
+  &:hover {
+    filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
+      brightness(95%) contrast(101%);
+  }
 }
 input {
   outline: none;
@@ -79,7 +86,7 @@ input {
   display: flex;
   align-items: center;
 }
-.main{
+.main {
   display: flex;
   gap: 120px;
   position: relative;
@@ -114,4 +121,9 @@ input {
   font-weight: 600;
   font-size: 34px;
   line-height: 41px;
+}
+.f-3239 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
 }

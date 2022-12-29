@@ -10,7 +10,7 @@ function NewsFeed() {
       <h1 className="f-3441">Yangiliklar lentasi</h1>
       <span className="action-groups__news-feed">
         {newsFeedLinks.map((item) => (
-          <Link className="action-box">
+          <Link className="action-box" key={item.id}>
             <span className="icon__action-box">
               <img src={item.img} alt="" />
             </span>

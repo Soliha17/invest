@@ -1,11 +1,10 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import News from "../news/Index";
 
 function Home() {
   return (
-    <div style={{ background: "red" }}>
-      Home
-      <Outlet />
+    <div>
+      <News/>
     </div>
   );
 }
