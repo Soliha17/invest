@@ -1,0 +1,117 @@
+@import "./sass/variables";
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/Inter-SemiBold.woff") format("woff"),
+    url("./assets/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Regular.woff") format("woff"),
+    url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Medium.woff") format("woff"),
+    url("./assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Bold.woff") format("woff"),
+    url("./assets/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Light.woff2") format("woff2"),
+    url("./assets/fonts/Inter-Light.woff") format("woff"),
+    url("./assets/fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+// GENERAL STYLES
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: $lightgrey;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+button,
+img {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+// GENERAL CLASSES
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.main{
+  display: flex;
+  gap: 120px;
+  position: relative;
+}
+// FONT CLASSES (first 2 number for font size last two number for line height)
+.f-1215 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.f-1417 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.f-1619 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.f-2024 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.f-2431 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+}
+.f-3441 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+}
