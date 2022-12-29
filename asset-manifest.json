@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invest/static/css/main.6c521ecf.css",
-    "main.js": "/invest/static/js/main.530affca.js",
+    "main.css": "/invest/static/css/main.c17d3fdd.css",
+    "main.js": "/invest/static/js/main.27011832.js",
     "static/media/tashkent.png": "/invest/static/media/tashkent.5795bf8522869881eb39.png",
     "static/media/meeting.png": "/invest/static/media/meeting.a110f7d10d4c0fed5d22.png",
     "static/media/toys.png": "/invest/static/media/toys.8ea1ebf246071c17fdb8.png",
@@ -77,11 +77,11 @@
     "static/media/back-icon.svg": "/invest/static/media/back-icon.5fe939d651acd5120a13b39401be56b4.svg",
     "static/media/dropdown-icon.svg": "/invest/static/media/dropdown-icon.cb7a2c9b876d233a7939f5d85d6c2925.svg",
     "static/media/menu-icon.svg": "/invest/static/media/menu-icon.a45a8e2e0846695d7faeb702ee2ec279.svg",
-    "main.6c521ecf.css.map": "/invest/static/css/main.6c521ecf.css.map",
-    "main.530affca.js.map": "/invest/static/js/main.530affca.js.map"
+    "main.c17d3fdd.css.map": "/invest/static/css/main.c17d3fdd.css.map",
+    "main.27011832.js.map": "/invest/static/js/main.27011832.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c521ecf.css",
-    "static/js/main.530affca.js"
+    "static/css/main.c17d3fdd.css",
+    "static/js/main.27011832.js"
   ]
 }
