@@ -1,4 +1,4 @@
-import dollarImg from "../assets/icons/dollar-img.svg";
+// import dollarImg from "../assets/icons/dollar-img.svg";
 import kunuzImg from "../assets/images/kunuz.svg";
 import daryoIcon from "../assets/icons/daryo.svg";
 import pilotImg from "../assets/images/pilot.png";
@@ -20,7 +20,7 @@ export const newsInfos = [
       "O‘zbekistonga pul o‘tkazmalari 2 barobarga oshdi. Buning iqtisodiyotga ta’siri qanday?",
     newsText:
       "Asosiy savdo-hamkor davlatlardan biri bo‘lgan Rossiyaga nisbatan qo‘llanilayotgan sanksiyalar ko‘plab qo‘shni mamlakatlar iqtisodiyotiga, shu jumladan, O‘zbekiston iqtisodiyotiga va pul o‘tkazmalari hajmiga ham o‘z ta’sirini o‘tkazdi.",
-    img: dollarImg,
+    img: tashkentImg,
     fullInfo: `Quyida bu haqida batafsil gaplashamiz: NFT ishlarini qayerda va qanday sotishingiz mumkinligini amaliy tajriba asosida o'rganamiz.
 Avvaliga NFT nimaligini hali ham yaxshi bilmasangiz quyida siz uchun tayyorlangan maqolalarni o'qib chiqing (muhim):
  NFT nima?
