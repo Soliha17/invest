@@ -33,8 +33,8 @@ function Navbar() {
               <img src={imagePath.dropdownIcon} alt="dropdown icon" />
             </button>
             <span className="dropdown-content">
-              <Link to="">Ruscha</Link>
-              <Link to="">Inglizcha</Link>
+              <Link to="">Russian</Link>
+              <Link to="">English</Link>
             </span>
           </span>
           <span className="login__header">
