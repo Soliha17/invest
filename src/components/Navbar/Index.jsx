@@ -24,7 +24,7 @@ function Navbar() {
         </div>
         <div className="header__action flex">
           <button className="add-btn flex f-1619">
-            Joylashtirish
+            Add
             <img src={imagePath.plusIcon} alt="" />
           </button>
           <span className="dropdown__header">
