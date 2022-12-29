@@ -1,4 +1,3 @@
-import Home from "../pages/home/Index";
 import Podcasts from "../pages/podcasts/Index"
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";

@@ -30,10 +30,10 @@ function NewsFull() {
   const [openComments, setOpenComments] = useState(false);
   useEffect(() => {
     let result = newsInfos.filter((item) => {
-      return item.id == id;
+      return item.id === +id;
     });
     setNews(result);
-  }, []);
+  }, [id]);
   function openCommentsFn() {
     setOpenComments(!openComments);
   }
