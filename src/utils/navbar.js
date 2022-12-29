@@ -1,13 +1,13 @@
-import Podcasts from "../pages/podcasts/Index"
+import Home from "../pages/home/Index"
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
 
 export const navbarUtils = [
   {
     id: 1,
-    title: "podcast",
-    path: "/podcast",
-    element: <Podcasts />,
+    title: "home",
+    path: "/",
+    element: <Home />,
   },
   {
     id: 2,
