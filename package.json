@@ -1,7 +1,7 @@
 {
   "name": "invest",
-  "homepage": "https://Soliha17.github.io/invest",
-  "version": "0.1.0", 
+  "homepage": "https://soliha17.github.io/invest",
+  "version": "0.1.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
