@@ -47,7 +47,7 @@ function Sidebar() {
       </span>
       <span className="sidebar__footer">
         <p className="f-1619">© invest-hub Inc. 2022</p>
-        <p className="f-1619">Biz bilan bog'lanish!</p>
+        <p className="f-1619">Biz bilan bog'lanish</p>
         <span className="sidebar__social-group">
           {sidebarSocialImages.map((item) => (
             <img src={item.img} key={item.id} alt="social-icons" />
