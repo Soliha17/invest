@@ -6,8 +6,8 @@ import { newsFeedLinks } from "../../utils/newsFeed";
 
 function NewsFeed() {
   return (
-    <div className="news-feed">
-      <h1 className="f-3441">Yangiliklar lentachasi</h1>
+    <div div className="news-feed">
+      <h1 className="f-3441">Yangiliklar lentasi</h1>
       <span className="action-groups__news-feed">
         {newsFeedLinks.map((item) => (
           <Link className="action-box" key={item.id}>

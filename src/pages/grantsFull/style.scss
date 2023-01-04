@@ -1,0 +1,43 @@
+@import "../../sass/variables";
+.grants-full__top {
+  gap: 20px;
+  height: auto;
+  align-items: start;
+  .back-group {
+    margin-top: 20px;
+    margin-left: -70px;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: $green;
+    cursor: pointer;
+  }
+}
+.grants-container {
+  height: auto;
+  .grants-box {
+    height: auto !important;
+    background: aqua;
+    height: auto;
+    .grants-full__top {
+      align-items: start;
+      gap: 20px;
+    }
+    .left__footer {
+      gap: 20px;
+      p {
+        color: $grey;
+      }
+    }
+    .info-box__grants {
+      padding: 124px 0;
+      padding: 50px;
+      height: auto !important;
+      background: #000 !important;
+      color: red;
+      .first__info-box {
+        margin-bottom: 221px;
+      }
+    }
+  }
+}

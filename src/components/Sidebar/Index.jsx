@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "./style.scss";
@@ -10,17 +10,12 @@ import {
 } from "../../utils/sidebarLinks";
 
 function Sidebar() {
-  const [click, setClick] = useState(4);
-  const [page, setPage] = useState(1);
-  const changeClick = (arg) => setClick(arg);
-  const changePage = (arg) => setPage(arg);
   return (
     <div className="sidebar flex">
       <span className="sidebar__links flex">
         {sidebarLinks.map((item) => (
           <Link
             to={item.path}
-            onClick={() => changeClick(item.id)}
             key={item.id}
             className={`sidebar__link flex ${
               window.location.pathname === item.path && "active-link"
@@ -33,16 +28,16 @@ function Sidebar() {
       </span>
       <span className="sidebar__pages">
         <h4 className="f-2024">Sahifalar</h4>
-        {sidebarPagesLinks.map((item) => (
+        {sidebarPagesLinks.map((link) => (
           <Link
-            key={item.id}
-            onClick={() => changePage(item.id)}
+            to={link.path}
+            key={link.id}
             className={`sidebar__link flex ${
-              page === item.id && "active-page"
+              window.location.pathname === link.path && "active-page"
             }`}
           >
-            <img src={item.img} alt="" />
-            <p className="f-2024">{item.title}</p>
+            <img src={link.img} alt="" />
+            <p className="f-2024">{link.title}</p>
           </Link>
         ))}
       </span>

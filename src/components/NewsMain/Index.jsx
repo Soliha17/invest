@@ -66,7 +66,7 @@ function NewsMain() {
             <img src={item.img} alt="" />
           </Link>
           <span className="footer__news-main flex">
-            <div className="left__footer flex">
+            <span className="left__footer flex">
               <p className="flex">
                 <img src={heartIcon} alt="" />
                 55
@@ -79,7 +79,7 @@ function NewsMain() {
                 <img src={eyeIcon} alt="" />
                 100
               </p>
-            </div>
+            </span>
             <span className="right__footer flex">
               <img src={sendIcon} alt="" />
               <img src={savedIcon} alt="" />
