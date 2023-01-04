@@ -1,7 +1,6 @@
 @import "../../sass/variables";
 .grants-full__top {
   gap: 20px;
-  height: auto;
   align-items: start;
   .back-group {
     margin-top: 20px;
@@ -14,11 +13,10 @@
   }
 }
 .grants-container {
-  height: auto;
-  .grants-box {
+  padding-bottom: 151px;
+  .grants-box__auto {
+    display: block;
     height: auto !important;
-    background: aqua;
-    height: auto;
     .grants-full__top {
       align-items: start;
       gap: 20px;
@@ -30,14 +28,53 @@
       }
     }
     .info-box__grants {
-      padding: 124px 0;
-      padding: 50px;
-      height: auto !important;
-      background: #000 !important;
-      color: red;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      ul{
+
+        padding-left: 20px;
+      }
+      ul li{
+        list-style-type: disc;
+      }
+      p,h6{
+      }
       .first__info-box {
-        margin-bottom: 221px;
+        padding-bottom: 21px !important;
+        h6{
+          margin-bottom: 10px;
+        }
+      }
+      .second__info-box{
+        margin-bottom: 10px;
+        h6,p{
+          margin-bottom: 5px;
+        }
+      }
+      .third__info-box{
+        margin-bottom: 40px;
+        h6{
+          margin-bottom: 5px;
+        }
       }
     }
+
+    .footer__grants-main{
+      margin-top: auto;
+      .left__footer{
+        a{
+          color: $green !important;
+          text-decoration-line: underline;
+        }
+      }
+      .right__footer{
+        p{
+          gap: 5px;
+          margin-right: 40px;
+        }
+      }
+    }
+
   }
 }
