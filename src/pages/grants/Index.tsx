@@ -4,7 +4,7 @@ import NewsFeed from "../../components/NewsFeed/Index";
 import Sidebar from "../../components/Sidebar/Index";
 import NewsMain from "../../components/NewsMain/Index";
 import GrantsFeed from "../../components/GrantsFeed/Index";
-import GrantsMain from "../../components/GrantsMain/Index"
+import GrantsMain from "../../components/GrantsMain/Index";
 
 function Grants() {
   return (

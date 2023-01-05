@@ -9,7 +9,7 @@ import itparkImg from "../assets/images/itpark.svg";
 import meetingImg from "../assets/images/meeting.png";
 import tashkentImg from "../assets/images/tashkent.png";
 
-export const newsInfos = [
+export const newsInfos:{id:number,path:string,logoImg:any,newsDate:string,newsType:string,newsTitle:string,newsText:string,img:any,fullInfo:string,}[] = [
   {
     id: 1,
     path: "/",

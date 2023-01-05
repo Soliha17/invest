@@ -25,7 +25,7 @@ function GrantsMain() {
   const [grants, setGrants] = useState([]);
   useEffect(() => {
     let result = grantsInfo.filter((item) => {
-      return item.id === +id;
+      return item.id === id;
     });
     setGrants(result);
   }, [id]);

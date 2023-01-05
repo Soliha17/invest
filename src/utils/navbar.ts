@@ -1,38 +1,43 @@
 import Grants from "../pages/grants/Index";
 import GrantsMain from "../pages/grantsFull/Index";
-import Home from "../pages/home/Index"
+import Home from "../pages/home/Index";
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
 
-export const navbarUtils = [
+export const navbarUtils: {
+  id: number;
+  title: string;
+  path: string;
+  element: any;
+}[] = [
   {
     id: 1,
     title: "home",
     path: "/",
-    element: <Home />,
+    element: Home,
   },
   {
     id: 2,
     title: "News",
     path: "/news",
-    element: <News />,
+    element: News,
   },
   {
     id: 3,
     title: "News",
     path: "/news/:id",
-    element: <NewsFull />,
+    element: NewsFull,
   },
   {
     id: 4,
     title: "Grants",
     path: "/grants",
-    element: <Grants />,
+    element: Grants,
   },
   {
     id: 5,
     title: "Grants",
     path: "/grants/:id",
-    element: <GrantsMain/>,
+    element: GrantsMain,
   },
 ];

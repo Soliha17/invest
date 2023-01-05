@@ -11,7 +11,7 @@ function GrantsFeed() {
       <h1 className="f-3441">Grantlar lentasi</h1>
       <span className="action-groups__grants-feed flex">
         {grantsFeed.map((item) => (
-          <Link className="action-box flex" key={item.id}>
+          <Link to={'/'} className="action-box flex" key={item.id}>
             <span className="icon__action-box">
               <img src={item.img} alt="" />
             </span>

@@ -21,7 +21,7 @@ function GrantsMain() {
   return (
     <div className="grants-container">
       {grantsInfo.map((info) => (
-        <span className="grants-box">
+        <span className="grants-box" key={info.id}>
           <span className="grants__top flex">
             <img src={grantsLogo} alt="grants Logo" />
             <span className="three-dots">

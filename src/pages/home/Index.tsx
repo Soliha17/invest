@@ -3,7 +3,9 @@ import Sidebar from "../../components/Sidebar/Index";
 import Grants from "../grants/Index";
 import News from "../news/Index";
 
-function Home() {
+
+
+const Home:React.FC = () => {
   return (
     <div className="wrapper">
       <div className="main">
@@ -13,7 +15,7 @@ function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Home;

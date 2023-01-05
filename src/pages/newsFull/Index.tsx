@@ -30,7 +30,7 @@ function NewsFull() {
   const [openComments, setOpenComments] = useState(false);
   useEffect(() => {
     let result = newsInfos.filter((item) => {
-      return item.id === +id;
+      return item.id === id;
     });
     setNews(result);
   }, [id]);
@@ -91,7 +91,7 @@ function NewsFull() {
                   <h4 className="f-2431">{item.newsTitle}</h4>
                   <p className="f-2024">{item.newsText}</p>
                 </span>
-                <Link className="news__img">
+                <Link to={'/'} className="news__img">
                   <img src={item.img} alt="" />
                 </Link>
                 <span className="full-text-box">
