@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./style.scss";
 
-import { grantsInfo } from "../../utils/grantsInfo";
+import { GrantsInfo, grantsInfo } from "../../utils/grantsInfo";
 import GrantsFeed from "../../components/GrantsFeed/Index";
 
 import copyIcon from "../../assets/icons/copy-icon.svg";
@@ -22,11 +22,13 @@ function GrantsMain() {
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
-  const [grants, setGrants] = useState([]);
+  const [grants, setGrants] = useState<GrantsInfo[]>([]);
+
+  let result: GrantsInfo[] = grantsInfo.filter((item) => {
+    return item.id === Number(id);
+  });
+
   useEffect(() => {
-    let result = grantsInfo.filter((item) => {
-      return item.id === id;
-    });
     setGrants(result);
   }, [id]);
 
@@ -125,7 +127,9 @@ function GrantsMain() {
                 </span>
                 <span className="footer__news-main footer__grants-main flex">
                   <span className="left__footer flex">
-                    <Link className="flex f-2431">Ro‘yxatdan o‘tish</Link>
+                    <Link to={""} className="flex f-2431">
+                      Ro‘yxatdan o‘tish
+                    </Link>
                   </span>
                   <span className="right__footer flex">
                     <p className="flex f-1417">

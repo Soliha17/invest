@@ -4,12 +4,14 @@ import Home from "../pages/home/Index";
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
 
-export const navbarUtils: {
+interface Utils {
   id: number;
   title: string;
   path: string;
   element: any;
-}[] = [
+}
+
+export const navbarUtils: Utils[] = [
   {
     id: 1,
     title: "home",

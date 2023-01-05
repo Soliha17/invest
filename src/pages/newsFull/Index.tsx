@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Index";
 
-import { newsInfos } from "../../utils/newsInfo";
+import { NewsInfo, newsInfos } from "../../utils/newsInfo";
 import { commentsData } from "../../utils/commentsData";
 
 import "./style.scss";
@@ -26,14 +26,17 @@ function NewsFull() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState<NewsInfo[]>([]);
   const [openComments, setOpenComments] = useState(false);
+
+  let result = newsInfos.filter((item) => {
+    return item.id === Number(id);
+  });
+
   useEffect(() => {
-    let result = newsInfos.filter((item) => {
-      return item.id === id;
-    });
     setNews(result);
   }, [id]);
+
   function openCommentsFn() {
     setOpenComments(!openComments);
   }
@@ -91,7 +94,7 @@ function NewsFull() {
                   <h4 className="f-2431">{item.newsTitle}</h4>
                   <p className="f-2024">{item.newsText}</p>
                 </span>
-                <Link to={'/'} className="news__img">
+                <Link to={"/"} className="news__img">
                   <img src={item.img} alt="" />
                 </Link>
                 <span className="full-text-box">
@@ -135,8 +138,8 @@ function NewsFull() {
               <h3 className="f-2431">Izohlar</h3>
               <textarea
                 className="f-1619"
-                cols="30"
-                rows="10"
+                cols={30}
+                rows={10}
                 placeholder="Izoh qoldirish ..."
               ></textarea>
               <button className="send-btn f-1619">Yuborish</button>

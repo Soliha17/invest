@@ -5,7 +5,7 @@ import News from "../news/Index";
 
 
 
-const Home:React.FC = () => {
+function Home() {
   return (
     <div className="wrapper">
       <div className="main">

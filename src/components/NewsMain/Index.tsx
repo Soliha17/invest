@@ -18,7 +18,7 @@ import { newsInfos } from "../../utils/newsInfo";
 function NewsMain() {
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
-  function onSelect(id) {
+  function onSelect(id: number) {
     navigate(`/news/${id}`);
   }
   return (
@@ -62,7 +62,7 @@ function NewsMain() {
             <h4 className="f-2431">{item.newsTitle}</h4>
             <p className="f-2024">{item.newsText}</p>
           </span>
-          <Link className="news__img">
+          <Link className="news__img" to={""}>
             <img src={item.img} alt="" />
           </Link>
           <span className="footer__news-main flex">

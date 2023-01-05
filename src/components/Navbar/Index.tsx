@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link,Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import "./style.scss";
 
@@ -91,7 +91,7 @@ function Navbar() {
           </span>
         </div>
       </header>
-      <Outlet/>
+      <Outlet />
     </>
   );
 }

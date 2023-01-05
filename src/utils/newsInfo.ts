@@ -9,7 +9,19 @@ import itparkImg from "../assets/images/itpark.svg";
 import meetingImg from "../assets/images/meeting.png";
 import tashkentImg from "../assets/images/tashkent.png";
 
-export const newsInfos:{id:number,path:string,logoImg:any,newsDate:string,newsType:string,newsTitle:string,newsText:string,img:any,fullInfo:string,}[] = [
+export interface NewsInfo {
+  id: number;
+  path: string;
+  logoImg: any;
+  newsDate: string;
+  newsType: string;
+  newsTitle: string;
+  newsText: string;
+  img: string;
+  fullInfo: string;
+}
+
+export const newsInfos: NewsInfo[] = [
   {
     id: 1,
     path: "/",

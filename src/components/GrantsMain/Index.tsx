@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useParams } from "react-router-dom";
 
 import "./style.scss";
 import { grantsInfo } from "../../utils/grantsInfo";
@@ -15,7 +15,7 @@ import savedIcon from "../../assets/icons/saved-icon.svg";
 function GrantsMain() {
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
-  function onSelect(id) {
+  function onSelect(id: number) {
     navigate(`/grants/${id}`);
   }
   return (
