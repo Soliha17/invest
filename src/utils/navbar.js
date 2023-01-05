@@ -18,19 +18,19 @@ export const navbarUtils = [
     element: <News />,
   },
   {
-    id: "2-1",
+    id: 3,
     title: "News",
     path: "/news/:id",
     element: <NewsFull />,
   },
   {
-    id: 3,
+    id: 4,
     title: "Grants",
     path: "/grants",
     element: <Grants />,
   },
   {
-    id: "3-1",
+    id: 5,
     title: "Grants",
     path: "/grants/:id",
     element: <GrantsMain/>,
