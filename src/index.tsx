@@ -4,9 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./index.scss";
 
-import Rout from "./router/router.tsx";
+import Rout from "./router/router";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
