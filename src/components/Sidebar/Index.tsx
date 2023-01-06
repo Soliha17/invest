@@ -26,7 +26,14 @@ function Sidebar() {
           </Link>
         ))}
       </span>
-      <span className="sidebar__pages">
+      <span
+        className="sidebar__pages"
+        style={
+          window.location.pathname === "/vacancy"
+            ? { display: "none" }
+            : { display: "flex" }
+        }
+      >
         <h4 className="font-style__2024">Sahifalar</h4>
         {sidebarPagesLinks.map((link) => (
           <Link
