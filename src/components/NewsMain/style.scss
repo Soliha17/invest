@@ -18,6 +18,9 @@
       gap: 20px;
       .date-group {
         gap: 3px;
+        p{
+          color: $grey;
+        }
       }
     }
     .action__top {

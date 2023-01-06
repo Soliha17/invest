@@ -75,6 +75,7 @@ img {
 input {
   outline: none;
 }
+
 // GENERAL CLASSES
 .wrapper {
   width: 100%;
@@ -86,10 +87,102 @@ input {
   display: flex;
   align-items: center;
 }
+.select {
+  width: 192px;
+  height: 40px;
+  border: 1px solid $onlyD;
+  color: #8c8c8c;
+  padding: 12px 11px 11px 10px;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a09f9f;
+}
 .main {
   display: flex;
-  gap: 120px;
+  gap: 70px;
+  // position: relative;
+}
+.main-inside-container {
+  display: flex;
+  gap: 80px;
+}
+@media (min-width: 1601px) {
+  .main {
+    gap: 110px;
+  }
+}
+
+.checkbox {
+  display: block;
   position: relative;
+  padding-left: 27px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid $onlyD;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: $lightgrey;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: $lightgrey;
+  border-color: $green;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 5.5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid $green;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 // FONT CLASSES (first 2 number for font size last two number for line height)
 .f-1215 {
@@ -106,6 +199,11 @@ input {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+.f-1625 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
 }
 .f-2024 {
   font-weight: 400;

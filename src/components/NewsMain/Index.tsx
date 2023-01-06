@@ -30,7 +30,7 @@ function NewsMain() {
               <img src={item.logoImg} alt="" />
               <span className="date-group flex">
                 <img src={watchIcon} alt="" />
-                <p>{item.newsDate}</p>
+                <p className="f-1215">{item.newsDate}</p>
               </span>
             </span>
             <span className="action__top flex">
