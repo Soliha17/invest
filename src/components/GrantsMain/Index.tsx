@@ -13,41 +13,56 @@ import sendIcon from "../../assets/icons/send-icon.svg";
 import savedIcon from "../../assets/icons/saved-icon.svg";
 
 function GrantsMain() {
-  const [dots, setDots] = useState(false);
+  const [visibleDots, setVisibleDots] = useState<boolean[]>(() =>
+    Array(grantsInfo.length).fill(false)
+  );
   const navigate = useNavigate();
   function onSelect(id: number) {
     navigate(`/grants/${id}`);
   }
+
   return (
     <div className="grants-container">
-      {grantsInfo.map((info) => (
+      {grantsInfo.map((info, index) => (
         <span className="grants-box" key={info.id}>
           <span className="grants__top flex">
             <img src={grantsLogo} alt="grants Logo" />
             <span className="three-dots">
               <img
                 src={threeDotsIcon}
-                onClick={() => setDots(!dots)}
-                alt="proas"
+                onClick={() =>
+                  setVisibleDots((dots) =>
+                    dots.map((visibleDot, visibleDotIndex) =>
+                      index === visibleDotIndex
+                        ? !visibleDots[index]
+                        : visibleDot
+                    )
+                  )
+                }
+                alt="dots"
               />
               <span
                 className="dots-content"
-                style={dots ? { display: "block" } : { display: "none" }}
+                style={
+                  visibleDots[index]
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
               >
                 <Link to="">
-                  <img src={copyIcon} alt="" />
+                  <img src={copyIcon} alt="copy icon" />
                   Nusxalash
                 </Link>
                 <Link to="">
-                  <img src={spamIcon} alt="" />
+                  <img src={spamIcon} alt="spam icon" />
                   Shikoyat qilish
                 </Link>
               </span>
             </span>
           </span>
-          <p className="grants-type f-1619">{info.grantsType}</p>
+          <p className="grants-type font-style__1619">{info.grantsType}</p>
           <span className="grants-middle" onClick={() => onSelect(info?.id)}>
-            <p className="f-2431">{info.text}</p>
+            <p className="font-style__2431">{info.text}</p>
             <img src={info.img} alt="oxford img" />
           </span>
           <span className="footer__news-main flex">
@@ -58,8 +73,8 @@ function GrantsMain() {
               </p>
             </span>
             <span className="right__footer flex">
-              <img src={sendIcon} alt="" />
-              <img src={savedIcon} alt="" />
+              <img src={sendIcon} alt="send icon" />
+              <img src={savedIcon} alt="saved icon" />
             </span>
           </span>
         </span>

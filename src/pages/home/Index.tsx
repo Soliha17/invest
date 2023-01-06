@@ -1,9 +1,7 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar/Index";
+import Sidebar from "../../components/sidebar/Index";
 import Grants from "../grants/Index";
 import News from "../news/Index";
-
-
 
 function Home() {
   return (
@@ -15,7 +13,7 @@ function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Home;

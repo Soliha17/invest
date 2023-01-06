@@ -12,9 +12,9 @@ function NewsFeed() {
         {newsFeedLinks.map((item) => (
           <Link className="action-box" key={item.id} to={""}>
             <span className="icon__action-box">
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="actions icon" />
             </span>
-            <p className="f-2024">{item.title}</p>
+            <p className="font-style__2024">{item.title}</p>
           </Link>
         ))}
       </span>

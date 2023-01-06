@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-import Sidebar from "../../components/Sidebar/Index";
+import Sidebar from "../../components/sidebar/Index";
 
 import { NewsInfo, newsInfos } from "../../utils/newsInfo";
 import { commentsData } from "../../utils/commentsData";
@@ -51,25 +51,25 @@ function NewsFull() {
         <div className="main-full">
           <div className="news-main news-full-main">
             <span className="back-group" onClick={goBack}>
-              <img src={backIcon} alt="" />
+              <img src={backIcon} alt="back icon" />
             </span>
             {news.map((item) => (
               <span className="new" key={item.id}>
                 <span className="top__news-main flex">
                   <span className="info__top flex">
-                    <img src={item.logoImg} alt="" />
+                    <img src={item.logoImg} alt="logo img" />
                     <span className="date-group flex">
-                      <img src={watchIcon} alt="" />
+                      <img src={watchIcon} alt="watch icon" />
                       <p>{item.newsDate}</p>
                     </span>
                   </span>
                   <span className="action__top flex">
-                    <img src={plusIcon} alt="" />
+                    <img src={plusIcon} alt="plus icon" />
                     <span className="three-dots">
                       <img
                         src={threeDotsIcon}
                         onClick={() => setDots(!dots)}
-                        alt=""
+                        alt="dots icon"
                       />
                       <span
                         className="dots-content"
@@ -78,11 +78,11 @@ function NewsFull() {
                         }
                       >
                         <Link to="">
-                          <img src={copyIcon} alt="" />
+                          <img src={copyIcon} alt="copy icon" />
                           Nusxalash
                         </Link>
                         <Link to="">
-                          <img src={spamIcon} alt="" />
+                          <img src={spamIcon} alt="spam icon" />
                           Shikoyat qilish
                         </Link>
                       </span>
@@ -90,16 +90,16 @@ function NewsFull() {
                   </span>
                 </span>
                 <span className="news__text">
-                  <h6 className="f-1619">{item.newsType}</h6>
-                  <h4 className="f-2431">{item.newsTitle}</h4>
-                  <p className="f-2024">{item.newsText}</p>
+                  <h6 className="font-style__1619">{item.newsType}</h6>
+                  <h4 className="font-style__2431">{item.newsTitle}</h4>
+                  <p className="font-style__2024">{item.newsText}</p>
                 </span>
                 <Link to={"/"} className="news__img">
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="news img" />
                 </Link>
                 <span className="full-text-box">
                   {item.fullInfo.split("\n").map((text, index) => (
-                    <p className="full-text f-2024" key={index}>
+                    <p className="full-text font-style__2024" key={index}>
                       {text}
                     </p>
                   ))}
@@ -107,7 +107,7 @@ function NewsFull() {
                 <span className="footer__news-main flex">
                   <div className="left__footer flex">
                     <p className="flex">
-                      <img src={heartIcon} alt="" />
+                      <img src={heartIcon} alt="heart icon" />
                       55
                     </p>
                     <p className="flex">
@@ -115,18 +115,18 @@ function NewsFull() {
                         src={commentIcon}
                         className="hov"
                         onClick={openCommentsFn}
-                        alt=""
+                        alt="comment icon"
                       />
                       35
                     </p>
                     <p className="flex">
-                      <img src={eyeIcon} alt="" />
+                      <img src={eyeIcon} alt="eye icon" />
                       100
                     </p>
                   </div>
                   <span className="right__footer flex">
-                    <img src={sendIcon} alt="" />
-                    <img src={savedIcon} alt="" />
+                    <img src={sendIcon} alt="send icon" />
+                    <img src={savedIcon} alt="saved icon" />
                   </span>
                 </span>
               </span>
@@ -135,35 +135,38 @@ function NewsFull() {
               className="comment-group"
               style={openComments ? { display: "block" } : { display: "none" }}
             >
-              <h3 className="f-2431">Izohlar</h3>
+              <h3 className="font-style__2431">Izohlar</h3>
               <textarea
-                className="f-1619"
+                className="font-style__1619"
                 cols={30}
                 rows={10}
                 placeholder="Izoh qoldirish ..."
               ></textarea>
-              <button className="send-btn f-1619">Yuborish</button>
+              <button className="send-btn font-style__1619">Yuborish</button>
               <span className="comments-box">
                 {commentsData.length > 0 ? (
                   commentsData.map((comment) => (
                     <span className="comment" key={comment.id}>
                       <span className="top__comment flex">
-                        <img src={comment.profileImg} alt="" />
+                        <img
+                          src={comment.profileImg}
+                          alt="comment profile img"
+                        />
                         <span className="profile-info">
-                          <h6 className="f-1619">{comment.userName}</h6>
-                          <p className="flex f-1215">
-                            <img src={watchIcon} alt="" />
+                          <h6 className="font-style__1619">{comment.userName}</h6>
+                          <p className="flex font-style__1215">
+                            <img src={watchIcon} alt="watch icon" />
                             {comment.commentDate}
                           </p>
                         </span>
                       </span>
                       <span className="middle__comment">
-                        <p className="f-1619">{comment.commentText}</p>
+                        <p className="font-style__1619">{comment.commentText}</p>
                       </span>
                       <span className="bottom__comment flex">
-                        <p className="f-1215">Javob qoldirish...</p>
-                        <p className="f-1215 flex">
-                          <img src={fullHeartIcon} alt="" />
+                        <p className="font-style__1215">Javob qoldirish...</p>
+                        <p className="font-style__1215 flex">
+                          <img src={fullHeartIcon} alt="full heart icon" />
                           {comment.numberOfLike} ta like
                         </p>
                       </span>
@@ -171,8 +174,8 @@ function NewsFull() {
                   ))
                 ) : (
                   <span className="no-comment">
-                    <img src={noComment} alt="" />
-                    <h4 className="f-3239">Bu maqolada izohlar mavjud emas</h4>
+                    <img src={noComment} alt="no comment img" />
+                    <h4 className="font-style__3239">Bu maqolada izohlar mavjud emas</h4>
                   </span>
                 )}
               </span>

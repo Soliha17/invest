@@ -1,5 +1,18 @@
 @import "../../sass/variables.scss";
+.back-group {
+    margin-top: 20px;
+    margin-left: -70px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: $green;
+    cursor: pointer;
+  }
 .vacancy-full-container {
+  margin-bottom: 50px;
   height: 1074px;
   .vacancy__full-info {
     background: $white;
@@ -8,7 +21,7 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    .f-2024 {
+    .font-style__2024 {
       font-weight: 500;
       color: $black;
       margin-bottom: 10px;
@@ -27,7 +40,7 @@
     .condition-list{
       margin-bottom: 10px;
     }
-    .f-1417 {
+    .font-style__1417 {
       color: $grey;
     }
   }

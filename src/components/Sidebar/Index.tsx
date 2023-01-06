@@ -22,12 +22,12 @@ function Sidebar() {
             }`}
           >
             <img src={item.img} alt={item.title} />
-            <p className="f-2024">{item.title}</p>
+            <p className="font-style__2024">{item.title}</p>
           </Link>
         ))}
       </span>
       <span className="sidebar__pages">
-        <h4 className="f-2024">Sahifalar</h4>
+        <h4 className="font-style__2024">Sahifalar</h4>
         {sidebarPagesLinks.map((link) => (
           <Link
             to={link.path}
@@ -36,14 +36,14 @@ function Sidebar() {
               window.location.pathname === link.path && "active-page"
             }`}
           >
-            <img src={link.img} alt="" />
-            <p className="f-2024">{link.title}</p>
+            <img src={link.img} alt="sidebar links icon" />
+            <p className="font-style__2024">{link.title}</p>
           </Link>
         ))}
       </span>
       <span className="sidebar__footer">
-        <p className="f-1619">© invest-hub Inc. 2022</p>
-        <p className="f-1619">Biz bilan bog'lanish</p>
+        <p className="font-style__1619">© invest-hub Inc. 2022</p>
+        <p className="font-style__1619">Biz bilan bog'lanish</p>
         <span className="sidebar__social-group">
           {sidebarSocialImages.map((item) => (
             <img src={item.img} key={item.id} alt="social-icons" />

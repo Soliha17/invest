@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { navbarUtils } from "../utils/navbar";
-import Navbar from "../components/Navbar/Index";
+import Navbar from "../components/navbar/Index";
 
 const Rout = () => {
   return (

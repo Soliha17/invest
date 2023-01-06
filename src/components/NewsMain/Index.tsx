@@ -16,41 +16,55 @@ import watchIcon from "../../assets/icons/small-watch-icon.svg";
 import { newsInfos } from "../../utils/newsInfo";
 
 function NewsMain() {
-  const [dots, setDots] = useState(false);
+  const [visibleDots, setVisibleDots] = useState<boolean[]>(() =>
+    Array(newsInfos.length).fill(false)
+  );
   const navigate = useNavigate();
   function onSelect(id: number) {
     navigate(`/news/${id}`);
   }
   return (
     <div className="news-main">
-      {newsInfos.map((item) => (
+      {newsInfos.map((item, index) => (
         <span className="new" key={item.id}>
           <span className="top__news-main flex">
             <span className="info__top flex">
               <img src={item.logoImg} alt="" />
               <span className="date-group flex">
-                <img src={watchIcon} alt="" />
-                <p className="f-1215">{item.newsDate}</p>
+                <img src={watchIcon} alt="watch icon" />
+                <p className="font-style__1215">{item.newsDate}</p>
               </span>
             </span>
             <span className="action__top flex">
-              <img src={plusIcon} alt="" />
+              <img src={plusIcon} alt="plus icon" />
               <span className="three-dots">
                 <img
                   src={threeDotsIcon}
-                  onClick={() => setDots(!dots)}
-                  alt="proas"
+                  onClick={() =>
+                    setVisibleDots((dots) =>
+                      dots.map((visibleDot, visibleDotIndex) =>
+                        index === visibleDotIndex
+                          ? !visibleDots[index]
+                          : visibleDot
+                      )
+                    )
+                  }
+                  alt="dots icon"
                 />
                 <span
                   className="dots-content"
-                  style={dots ? { display: "block" } : { display: "none" }}
+                  style={
+                    visibleDots[index]
+                      ? { display: "block" }
+                      : { display: "none" }
+                  }
                 >
                   <Link to="">
-                    <img src={copyIcon} alt="" />
+                    <img src={copyIcon} alt="copy icon" />
                     Nusxalash
                   </Link>
                   <Link to="">
-                    <img src={spamIcon} alt="" />
+                    <img src={spamIcon} alt="spam icon" />
                     Shikoyat qilish
                   </Link>
                 </span>
@@ -58,9 +72,9 @@ function NewsMain() {
             </span>
           </span>
           <span className="news__text" onClick={() => onSelect(item?.id)}>
-            <h6 className="f-1619">{item.newsType}</h6>
-            <h4 className="f-2431">{item.newsTitle}</h4>
-            <p className="f-2024">{item.newsText}</p>
+            <h6 className="font-style__1619">{item.newsType}</h6>
+            <h4 className="font-style__2431">{item.newsTitle}</h4>
+            <p className="font-style__2024">{item.newsText}</p>
           </span>
           <Link className="news__img" to={""}>
             <img src={item.img} alt="" />
@@ -68,21 +82,21 @@ function NewsMain() {
           <span className="footer__news-main flex">
             <span className="left__footer flex">
               <p className="flex">
-                <img src={heartIcon} alt="" />
+                <img src={heartIcon} alt="heart icon" />
                 55
               </p>
               <p className="flex">
-                <img src={commentIcon} alt="" />
+                <img src={commentIcon} alt="comment icon" />
                 35
               </p>
               <p className="flex">
-                <img src={eyeIcon} alt="" />
+                <img src={eyeIcon} alt="eye icon" />
                 100
               </p>
             </span>
             <span className="right__footer flex">
-              <img src={sendIcon} alt="" />
-              <img src={savedIcon} alt="" />
+              <img src={sendIcon} alt="send icon" />
+              <img src={savedIcon} alt="saved icon" />
             </span>
           </span>
         </span>

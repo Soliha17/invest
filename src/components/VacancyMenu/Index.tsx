@@ -5,7 +5,7 @@ import "./style.scss";
 function VacancyMenu() {
   return (
     <div className="vacancy__menu">
-      <h3 className="f-2024">Hudud</h3>
+      <h3 className="font-style__2024">Hudud</h3>
       <form>
         <select className="select">
           <option value="viloyat">Viloyatni tanlang</option>
@@ -16,7 +16,7 @@ function VacancyMenu() {
           <option value="andijon">Andijon</option>
         </select>
       </form>
-      <h4 className="f-1619">Tuman/shahar</h4>
+      <h4 className="font-style__1619">Tuman/shahar</h4>
       <form>
         <select className="select">
           <option value="viloyat">Shaharni tanlang</option>
@@ -28,7 +28,7 @@ function VacancyMenu() {
         </select>
       </form>
       <span className="direction-box">
-        <h3 className="f-2024">Yo’nalish</h3>
+        <h3 className="font-style__2024">Yo’nalish</h3>
         <span className="direction__checkbox">
           <label className="checkbox">
             <input type="checkbox" />
@@ -72,7 +72,7 @@ function VacancyMenu() {
           </label>
         </span>
         <span className="condition-box">
-          <h3 className="f-2024">Holat</h3>
+          <h3 className="font-style__2024">Holat</h3>
 
           <label className="checkbox">
             <input type="checkbox" />

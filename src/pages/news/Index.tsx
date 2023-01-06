@@ -1,8 +1,8 @@
 import React from "react";
 
-import NewsFeed from "../../components/NewsFeed/Index";
-import Sidebar from "../../components/Sidebar/Index";
-import NewsMain from "../../components/NewsMain/Index";
+import NewsFeed from "../../components/newsFeed/Index";
+import Sidebar from "../../components/sidebar/Index";
+import NewsMain from "../../components/newsMain/Index";
 
 function News() {
   return (

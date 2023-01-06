@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./style.scss"
+import "./style.scss";
 
-import VacancyMain from "../../components/VacancyMain/Index";
-import Sidebar from "../../components/Sidebar/Index";
-import VacancyFeed from "../../components/VacancyFeed/Index";
-import VacancyMenu from "../../components/VacancyMenu/Index";
+import VacancyMain from "../../components/vacancyMain/Index";
+import Sidebar from "../../components/sidebar/Index";
+import VacancyFeed from "../../components/vacancyFeed/Index";
+import VacancyMenu from "../../components/vacancyMenu/Index";
 
 function Vacancy() {
   return (
@@ -16,7 +16,7 @@ function Vacancy() {
           <VacancyFeed />
           <div className="main-inside-container">
             <VacancyMain />
-            <VacancyMenu/>
+            <VacancyMenu />
           </div>
         </div>
       </div>

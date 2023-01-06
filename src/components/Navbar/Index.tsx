@@ -19,16 +19,16 @@ function Navbar() {
           <img src={imagePath.investLogo} alt="invest hub logo" />
         </div>
         <div className="header__input-group flex">
-          <img src={imagePath.searchIcon} alt="" />
-          <input type="text" className="f-1619" placeholder="Izlash..." />
+          <img src={imagePath.searchIcon} alt="search icon" />
+          <input type="text" className="font-style__1619" placeholder="Izlash..." />
         </div>
         <div className="header__action flex">
-          <button className="add-btn flex f-1619">
+          <button className="add-btn flex font-style__1619">
             Joylashtirish
-            <img src={imagePath.plusIcon} alt="" />
+            <img src={imagePath.plusIcon} alt="plus icon" />
           </button>
           <span className="dropdown__header">
-            <button className="flex f-1619">
+            <button className="flex font-style__1619">
               O‘zbekcha
               <img src={imagePath.dropdownIcon} alt="dropdown icon" />
             </button>
@@ -38,7 +38,7 @@ function Navbar() {
             </span>
           </span>
           <span className="login__header">
-            <button className="flex f-1619" onClick={onChange}>
+            <button className="flex font-style__1619" onClick={onChange}>
               <img src={imagePath.userIcon} alt="user icon" />
               Kirish
             </button>
@@ -57,7 +57,7 @@ function Navbar() {
                   <img src={imagePath.camereIcon} alt="camera" />
                 </span>
                 <span className="info-group">
-                  <h6 className="f-1619">Qayum Murtazoyev</h6>
+                  <h6 className="font-style__1619">Qayum Murtazoyev</h6>
                   <p>+9989 *** ** 99</p>
                 </span>
               </span>

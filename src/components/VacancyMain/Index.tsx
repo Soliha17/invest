@@ -14,39 +14,53 @@ import savedIcon from "../../assets/icons/saved-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 
 function VacancyMain() {
-  const [dots, setDots] = useState(false);
+  const [visibleDots, setVisibleDots] = useState<boolean[]>(() =>
+    Array(vacancyInfos.length).fill(false)
+  );
   const navigate = useNavigate();
   function onSelect(id: number) {
     navigate(`/vacancy/${id}`);
   }
   return (
     <div className="vacancy-container">
-      {vacancyInfos.map((info) => (
+      {vacancyInfos.map((info,index) => (
         <span className="vacancy-box" key={info.id}>
           <span className="vacancy__top flex">
             <span className="info__top flex">
-              <img src={info.logoImg} alt="" />
+              <img src={info.logoImg} alt="company logo icon" />
               <span className="date-group flex">
-                <img src={watchIcon} alt="" />
-                <p className="f-1215">{info.vacancyDate}</p>
+                <img src={watchIcon} alt="watch icon" />
+                <p className="font-style__1215">{info.vacancyDate}</p>
               </span>
             </span>
             <span className="three-dots">
               <img
                 src={threeDotsIcon}
-                onClick={() => setDots(!dots)}
-                alt="proas"
+                onClick={() =>
+                  setVisibleDots((dots) =>
+                    dots.map((visibleDot, visibleDotIndex) =>
+                      index === visibleDotIndex
+                        ? !visibleDots[index]
+                        : visibleDot
+                    )
+                  )
+                }
+                alt="dots icon"
               />
               <span
                 className="dots-content"
-                style={dots ? { display: "block" } : { display: "none" }}
+                style={
+                  visibleDots[index]
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
               >
                 <Link to="">
-                  <img src={copyIcon} alt="" />
+                  <img src={copyIcon} alt="copy icon" />
                   Nusxalash
                 </Link>
                 <Link to="">
-                  <img src={spamIcon} alt="" />
+                  <img src={spamIcon} alt="spam icon" />
                   Shikoyat qilish
                 </Link>
               </span>
@@ -54,17 +68,20 @@ function VacancyMain() {
           </span>
           <span className="vacancy__middle">
             <span className="vacancy__info-top">
-              <p className="f-2431" onClick={() => onSelect(info?.id)}>
+              <p
+                className="font-style__2431"
+                onClick={() => onSelect(info?.id)}
+              >
                 {info.vacancyTitle}
               </p>
-              <p className="f-1417">{info.vacancyType}</p>
+              <p className="font-style__1417">{info.vacancyType}</p>
             </span>
             <span className="vacancy__info-bottom flex">
-              <p className="f-1417 flex">
+              <p className="font-style__1417 flex">
                 <img src={smallLocationIcon} alt="location icon" />
                 {info.vacancyLocation}
               </p>
-              <p className="f-1417">{info.vacancySalary}</p>
+              <p className="font-style__1417">{info.vacancySalary}</p>
             </span>
           </span>
           <span className="vacancy__footer flex">
@@ -75,8 +92,8 @@ function VacancyMain() {
               </p>
             </span>
             <span className="right__footer flex">
-              <img src={sendIcon} alt="" />
-              <img src={savedIcon} alt="" />
+              <img src={sendIcon} alt="send icon" />
+              <img src={savedIcon} alt="saved icon" />
             </span>
           </span>
         </span>
