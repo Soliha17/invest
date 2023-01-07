@@ -1,4 +1,5 @@
 import Vacancy from "../pages/vacancy/Index";
+import Events from "../pages/events/Index";
 import Grants from "../pages/grants/Index";
 import GrantsMain from "../pages/grantsFull/Index";
 import Home from "../pages/home/Index";
@@ -55,5 +56,11 @@ export const navbarUtils: Utils[] = [
     title: "Vacancy",
     path: "/vacancy/:id",
     element: VacancyFull,
+  },
+  {
+    id: 8,
+    title: "Events",
+    path: "/events",
+    element: Events,
   },
 ];

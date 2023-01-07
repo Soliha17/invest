@@ -1,23 +1,26 @@
 import React from "react";
 
-import "./style.scss";
+
+// import "./style.scss";
 
 import VacancyMain from "../../components/vacancyMain/Index";
 import Sidebar from "../../components/sidebar/Index";
 import VacancyFeed from "../../components/vacancyFeed/Index";
 import VacancyMenu from "../../components/vacancyMenu/Index";
+import EventsMain from "../../components/eventsMain/Index";
 
-const vacancyFeedTitle: string = "Vakansiyalar lentasi";
+const eventsFeedTitle: string = "Tadbirlar lentasi";
 
-function Vacancy() {
+
+function Events() {
   return (
     <div className="wrapper">
       <div className="main">
         <Sidebar />
         <div className="main-full">
-          <VacancyFeed vacancyFeedTitle={vacancyFeedTitle} />
+          <VacancyFeed eventsFeedTitle={eventsFeedTitle} />
           <div className="main-inside-container">
-            <VacancyMain />
+            <EventsMain />
             <VacancyMenu />
           </div>
         </div>
@@ -26,4 +29,4 @@ function Vacancy() {
   );
 }
 
-export default Vacancy;
+export default Events;
