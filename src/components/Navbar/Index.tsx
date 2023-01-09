@@ -12,8 +12,8 @@ function Navbar() {
     setopenProfileMenu(true);
   }
   return (
-    <>
-      <header className="header wrapper flex">
+    <header className="header-container">
+      <div className="header wrapper flex">
         <div className="header__logo-group flex">
           <img src={imagePath.menuIcon} alt="menu-icon" />
           <img src={imagePath.investLogo} alt="invest hub logo" />
@@ -96,9 +96,9 @@ function Navbar() {
             </span>
           </span>
         </div>
-      </header>
+      </div>
       <Outlet />
-    </>
+    </header>
   );
 }
 export default Navbar;

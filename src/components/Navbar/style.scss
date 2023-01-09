@@ -1,4 +1,7 @@
 @import "../../sass/variables";
+.header-container {
+  background: $white;
+}
 .header {
   position: sticky;
   top: 0;
