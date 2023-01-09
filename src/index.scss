@@ -94,16 +94,14 @@ input {
 .main {
   display: flex;
   gap: 70px;
-  // position: relative;
 }
 .main-inner {
   display: flex;
   gap: 80px;
 }
-@media (min-width: 1601px) {
-  .main {
-    gap: 110px;
-  }
+.main-full{
+  position: relative;
+  left: 425px;
 }
 
 .back-group {

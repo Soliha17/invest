@@ -1,27 +1,40 @@
 @import "../../sass/variables.scss";
 .sidebar {
+  position: fixed;
   width: 253px;
+  max-height: calc(100vh - 9rem);
   margin: 40px 0 0 100px;
   gap: 40px;
   flex-direction: column;
   align-items: start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .active-link {
     margin-left: -15px;
     padding: 17px 0 16px 20px;
     background: $white;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
   }
+
   .active-page {
     margin-left: -10px;
     padding: 17px 0 16px 10px;
     background: $white;
     border: 1px solid $grey;
   }
+
   .sidebar__links {
     flex-direction: column;
     align-items: start;
     gap: 20px;
   }
+
   .sidebar__link {
     width: 253px;
     gap: 20px;
@@ -31,6 +44,7 @@
       color: $black;
     }
   }
+
   .sidebar__pages {
     display: flex;
     flex-direction: column;
@@ -41,6 +55,7 @@
       border-bottom: 0.5px solid $grey;
       color: $darkgrey;
     }
+
     .sidebar__page {
       width: 253px;
       align-items: center;
@@ -52,6 +67,7 @@
       }
     }
   }
+
   .sidebar__footer {
     padding-top: 20px;
     border-top: 0.5px solid $grey;
@@ -65,6 +81,7 @@
     p:nth-child(2) {
       margin-bottom: 10px;
     }
+
     .sidebar__social-group {
       display: flex;
       align-items: center;

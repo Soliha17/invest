@@ -1,11 +1,12 @@
-import Vacancy from "../pages/vacancy/Index";
-import Events from "../pages/events/Index";
-import Grants from "../pages/grants/Index";
-import GrantsMain from "../pages/grantsFull/Index";
 import Home from "../pages/home/Index";
+import Vacancy from "../pages/vacancy/Index";
+import VacancyFull from "../pages/vacancyFull/Index";
+import Events from "../pages/events/Index";
+import EventsFull from "../pages/eventsFull/Index";
+import Grants from "../pages/grants/Index";
+import GrantsFull from "../pages/grantsFull/Index";
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
-import VacancyFull from "../pages/vacancyFull/Index";
 
 interface Utils {
   id: number;
@@ -43,7 +44,7 @@ export const navbarUtils: Utils[] = [
     id: 5,
     title: "Grants",
     path: "/grants/:id",
-    element: GrantsMain,
+    element: GrantsFull,
   },
   {
     id: 6,
@@ -53,7 +54,7 @@ export const navbarUtils: Utils[] = [
   },
   {
     id: 7,
-    title: "Vacancy",
+    title: "VacancyFull",
     path: "/vacancy/:id",
     element: VacancyFull,
   },
@@ -62,5 +63,11 @@ export const navbarUtils: Utils[] = [
     title: "Events",
     path: "/events",
     element: Events,
+  },
+  {
+    id: 9,
+    title: "EventsFull",
+    path: "/events/:id",
+    element: EventsFull,
   },
 ];

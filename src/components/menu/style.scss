@@ -1,5 +1,8 @@
 @import "../../sass/variables.scss";
 .menu {
+  position: sticky;
+  top: 115px;
+  right: 90px;
   padding: 20px;
   width: 272px;
   height: 581px;

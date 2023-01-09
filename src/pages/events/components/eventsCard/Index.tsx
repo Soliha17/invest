@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./style.scss";
 import { EventsCardData } from "../../../../mock/eventsCardDatas";
@@ -14,6 +14,7 @@ import smallDateIcon from "../../../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../../../assets/icons/small-location-icon.svg";
 
 function EventsCard({
+  id,
   title,
   type,
   text,
@@ -22,11 +23,15 @@ function EventsCard({
   location,
   img,
 }: EventsCardData) {
+  const navigate = useNavigate();
   const [dots, setDots] = useState(false);
   function handleDots() {
-    setDots(!dots)
+    setDots(!dots);
   }
 
+  function onSelect(id: number) {
+    navigate(`/events/${id}`);
+  }
   return (
     <>
       <div className="events-card">
@@ -36,7 +41,9 @@ function EventsCard({
         <span className="info__events-card">
           <span className="top__events-card">
             <span className="title__events-group">
-              <h4 className="font-style__2024">{title}</h4>
+              <h4 className="font-style__2024" onClick={() => onSelect(id)}>
+                {title}
+              </h4>
               <p className="font-style__1417">{type}</p>
             </span>
             <span className="three-dots">

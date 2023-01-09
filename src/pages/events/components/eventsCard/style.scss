@@ -1,11 +1,18 @@
 @import "../../../../sass/variables.scss";
 
 .events-card {
+  &:active,
+  &:hover {
+    border-color: #008b34;
+  }
   width: 655px;
   height: 234px;
   background: $white;
   margin-bottom: 40px;
   display: flex;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+
   .three-dots {
     display: inline-flex;
     position: relative;
@@ -75,7 +82,7 @@
             gap: 3px;
             align-items: center !important;
           }
-          p{
+          p {
             margin-top: 2px;
             color: $grey;
           }
