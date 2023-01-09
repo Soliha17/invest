@@ -3,8 +3,8 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/sidebar/Index";
 
-import { NewsInfo, newsInfos } from "../../utils/newsInfo";
-import { commentsData } from "../../utils/commentsData";
+import { NewsCardData, newsCardDatas } from "../../mock/newsCardDatas";
+import { commentsData } from "../../mock/commentsDatas";
 
 import "./style.scss";
 
@@ -26,10 +26,10 @@ function NewsFull() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
-  const [news, setNews] = useState<NewsInfo[]>([]);
+  const [news, setNews] = useState<NewsCardData[]>([]);
   const [openComments, setOpenComments] = useState(false);
 
-  let result = newsInfos.filter((item) => {
+  let result = newsCardDatas.filter((item) => {
     return item.id === Number(id);
   });
 
@@ -153,7 +153,9 @@ function NewsFull() {
                           alt="comment profile img"
                         />
                         <span className="profile-info">
-                          <h6 className="font-style__1619">{comment.userName}</h6>
+                          <h6 className="font-style__1619">
+                            {comment.userName}
+                          </h6>
                           <p className="flex font-style__1215">
                             <img src={watchIcon} alt="watch icon" />
                             {comment.commentDate}
@@ -161,7 +163,9 @@ function NewsFull() {
                         </span>
                       </span>
                       <span className="middle__comment">
-                        <p className="font-style__1619">{comment.commentText}</p>
+                        <p className="font-style__1619">
+                          {comment.commentText}
+                        </p>
                       </span>
                       <span className="bottom__comment flex">
                         <p className="font-style__1215">Javob qoldirish...</p>
@@ -175,7 +179,9 @@ function NewsFull() {
                 ) : (
                   <span className="no-comment">
                     <img src={noComment} alt="no comment img" />
-                    <h4 className="font-style__3239">Bu maqolada izohlar mavjud emas</h4>
+                    <h4 className="font-style__3239">
+                      Bu maqolada izohlar mavjud emas
+                    </h4>
                   </span>
                 )}
               </span>

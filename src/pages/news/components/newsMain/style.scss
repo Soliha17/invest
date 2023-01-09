@@ -1,0 +1,9 @@
+@import "../../../../sass/variables";
+
+.news-main {
+  width: 924px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  gap: 40px;
+}

@@ -1,16 +1,12 @@
 import React from "react";
 
 
-// import "./style.scss";
-
-import VacancyMain from "../../components/vacancyMain/Index";
 import Sidebar from "../../components/sidebar/Index";
-import VacancyFeed from "../../components/vacancyFeed/Index";
-import VacancyMenu from "../../components/vacancyMenu/Index";
-import EventsMain from "../../components/eventsMain/Index";
+import EventsFeed from "./components/eventsFeed/Index";
+import Menu from "../../components/menu/Index";
+import EventsMain from "./components/eventsMain/Index";
 
 const eventsFeedTitle: string = "Tadbirlar lentasi";
-
 
 function Events() {
   return (
@@ -18,10 +14,10 @@ function Events() {
       <div className="main">
         <Sidebar />
         <div className="main-full">
-          <VacancyFeed eventsFeedTitle={eventsFeedTitle} />
+          <EventsFeed />
           <div className="main-inside-container">
             <EventsMain />
-            <VacancyMenu />
+            <Menu />
           </div>
         </div>
       </div>

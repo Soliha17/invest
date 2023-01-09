@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./style.scss";
-import { VacancyInfo, vacancyInfos } from "../../utils/vacancyInfo";
+import { VacancyCardTypes, vacancyCards } from "../../mock/vacancyCardDatas";
 
 import copyIcon from "../../assets/icons/copy-icon.svg";
 import spamIcon from "../../assets/icons/spam-icon.svg";
@@ -15,15 +15,15 @@ import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 import backIcon from "../../assets/icons/back-icon.svg";
 
 import Sidebar from "../../components/sidebar/Index";
-import VacancyMenu from "../../components/vacancyMenu/Index";
+import VacancyMenu from "../../components/menu/Index";
 
 function VacancyFull() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
-  const [vacancy, setVacancy] = useState<VacancyInfo[]>([]);
+  const [vacancy, setVacancy] = useState<VacancyCardTypes[]>([]);
 
-  let result = vacancyInfos.filter((item) => {
+  let result = vacancyCards.filter((item) => {
     return item.id === Number(id);
   });
 

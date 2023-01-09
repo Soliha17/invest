@@ -3,8 +3,8 @@ import { Link, Outlet } from "react-router-dom";
 
 import "./style.scss";
 
-import { imagePath } from "../../utils/navbarImages";
-import { userLinks } from "../../utils/navbarUserActions";
+import { imagePath } from "../../mock/navbarImagesDatas";
+import { userLinks } from "../../mock/navbarUserActionsDatas";
 
 function Navbar() {
   const [login, setLogin] = useState(false);
@@ -20,7 +20,11 @@ function Navbar() {
         </div>
         <div className="header__input-group flex">
           <img src={imagePath.searchIcon} alt="search icon" />
-          <input type="text" className="font-style__1619" placeholder="Izlash..." />
+          <input
+            type="text"
+            className="font-style__1619"
+            placeholder="Izlash..."
+          />
         </div>
         <div className="header__action flex">
           <button className="add-btn flex font-style__1619">

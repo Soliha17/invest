@@ -3,8 +3,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./style.scss";
 
-import { GrantsInfo, grantsInfo } from "../../utils/grantsInfo";
-import GrantsFeed from "../../components/grantsFeed/Index";
+import { GrantsInfo, grantsInfo } from "../../mock/grantsInfoDatas";
+import GrantsFeed from "../grants/components/grantsFeed/Index";
 
 import copyIcon from "../../assets/icons/copy-icon.svg";
 import spamIcon from "../../assets/icons/spam-icon.svg";
@@ -75,7 +75,9 @@ function GrantsMain() {
                     </span>
                   </span>
                 </span>
-                <p className="grants-type font-style__1619">{info.grantsType}</p>
+                <p className="grants-type font-style__1619">
+                  {info.grantsType}
+                </p>
                 <span className="grants-middle">
                   <p className="font-style__2431">{info.text}</p>
                   <img src={info.img} alt="oxford img" />
@@ -107,7 +109,9 @@ function GrantsMain() {
                     <p className="font-style__2024">{info.firstInfo}</p>
                   </span>
                   <span className="second__info-box">
-                    <h6 className="font-style__2431">Ariza topshirish jarayoni</h6>
+                    <h6 className="font-style__2431">
+                      Ariza topshirish jarayoni
+                    </h6>
                     <p className="font-style__1621">{info.secondInfo}</p>
                     <ul>
                       <li>{info.listInfo}</li>
@@ -116,7 +120,9 @@ function GrantsMain() {
                     </ul>
                   </span>
                   <span className="third__info-box">
-                    <h6 className="font-style__2431">Dasturning manfaatli tomoni</h6>
+                    <h6 className="font-style__2431">
+                      Dasturning manfaatli tomoni
+                    </h6>
                     <p>{info.thirdInfo}</p>
                     <ul>
                       <li>{info.firstList}</li>

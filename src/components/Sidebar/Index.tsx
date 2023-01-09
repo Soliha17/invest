@@ -7,7 +7,7 @@ import {
   sidebarLinks,
   sidebarPagesLinks,
   sidebarSocialImages,
-} from "../../utils/sidebarLinks";
+} from "../../mock/sidebarLinksDatas";
 
 function Sidebar() {
   return (
