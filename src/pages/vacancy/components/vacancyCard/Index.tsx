@@ -10,7 +10,6 @@ import threeDotsIcon from "../../../../assets/icons/three-dots-icon.svg";
 import sendIcon from "../../../../assets/icons/send-icon.svg";
 import watchIcon from "../../../../assets/icons/small-watch-icon.svg";
 import savedIcon from "../../../../assets/icons/saved-icon.svg";
-import smallDateIcon from "../../../../assets/icons/small-date-icon.svg";
 import eyeIcon from "../../../../assets/icons/eye-icon.svg";
 import smallLocationIcon from "../../../../assets/icons/small-location-icon.svg";
 
@@ -31,16 +30,16 @@ function VacancyCard({
   }
   return (
     <>
-      <span className="vacancy-box" key={id}>
-        <span className="vacancy__top flex">
-          <span className="info__top flex">
+      <span className="vacancy-card" key={id}>
+        <span className="vacancy-card__top flex">
+          <span className="left__vacancy-card flex">
             <img src={logoImg} alt="company logo icon" />
-            <span className="date-group flex">
+            <span className="date-group__vacancy-card flex">
               <img src={watchIcon} alt="watch icon" />
               <p className="font-style__1215">{vacancyDate}</p>
             </span>
           </span>
-          <span className="three-dots">
+          <span className="right__vacancy-card three-dots">
             <img
               src={threeDotsIcon}
               onClick={() => setDots(!dots)}
@@ -61,14 +60,14 @@ function VacancyCard({
             </span>
           </span>
         </span>
-        <span className="vacancy__middle">
-          <span className="vacancy__info-top">
+        <span className="vacancy-card__middle">
+          <span className="vacancy-card__title-group">
             <p className="font-style__2431" onClick={() => onSelect(id)}>
               {vacancyTitle}
             </p>
             <p className="font-style__1417">{vacancyType}</p>
           </span>
-          <span className="vacancy__info-bottom flex">
+          <span className="vacancy-card__location-group flex">
             <p className="font-style__1417 flex">
               <img src={smallLocationIcon} alt="location icon" />
               {vacancyLocation}
@@ -76,7 +75,7 @@ function VacancyCard({
             <p className="font-style__1417">{vacancySalary}</p>
           </span>
         </span>
-        <span className="vacancy__footer flex">
+        <span className="vacancy-card__footer flex">
           <span className="left__footer">
             <p className="flex">
               <img src={eyeIcon} alt="eye icon" />

@@ -7,9 +7,9 @@ import "./style.scss";
 
 function EventsFeed() {
   return (
-    <div className="vacancy-feed grants-feed flex">
+    <div className="events-feed flex">
       <h1 className="f-3441">Vakansiyalar lentasi</h1>
-      <span className="action-groups__grants-feed flex">
+      <span className="action-group__events-feed flex">
         {eventsFeed.map((item) => (
           <Link to={"/"} className="action-box flex" key={item.id}>
             <span className="icon__action-box">

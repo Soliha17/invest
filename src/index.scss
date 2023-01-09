@@ -57,6 +57,9 @@
   list-style: none;
   transition: all 0.3s ease;
 }
+html{
+  font-size: 16px;
+}
 body {
   background: $lightgrey;
   font-family: "Inter", sans-serif;
@@ -87,24 +90,12 @@ input {
   display: flex;
   align-items: center;
 }
-.select {
-  width: 192px;
-  height: 40px;
-  border: 1px solid $onlyD;
-  color: #8c8c8c;
-  padding: 12px 11px 11px 10px;
-  outline: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: #a09f9f;
-}
 .main {
   display: flex;
   gap: 70px;
   // position: relative;
 }
-.main-inside-container {
+.main-inner {
   display: flex;
   gap: 80px;
 }
@@ -114,6 +105,44 @@ input {
   }
 }
 
+.back-group {
+  margin-top: 20px;
+  margin-left: -70px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: $green;
+  cursor: pointer;
+}
+.three-dots {
+  display: inline-flex;
+  position: relative;
+  .dots-content {
+    padding: 10px 20px;
+    display: none;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 180px;
+    overflow: auto;
+    background: $white;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.12);
+    a {
+      text-align: center;
+      display: flex;
+      gap: 5px;
+      color: $black;
+      padding: 5px 0;
+    }
+  }
+  &:hover .dots-content {
+    display: block;
+  }
+}
 .checkbox {
   display: block;
   position: relative;
@@ -187,41 +216,41 @@ input {
 // FONT STYLE CLASSES (first 2 number for font size last two number for line height)
 .font-style__1215 {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
 }
 .font-style__1417 {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
 }
 .font-style__1619 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
 }
 .font-style__1625 {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 25px;
 }
 .font-style__2024 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 24px;
 }
 .font-style__2431 {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 31px;
-}
-.font-style__3441 {
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
 }
 .font-style__3239 {
   font-weight: 500;
   font-size: 32px;
-  line-height: 39px;
+  line-height: 2rem;
+}
+.font-style__3441 {
+  font-weight: 600;
+  font-size: 2.125rem;
+  line-height: 41px;
 }

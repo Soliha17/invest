@@ -1,8 +1,8 @@
 @import "../../../../sass/variables";
 
-.new {
+.news-card {
   background: $white;
-  .top__news-main {
+  .top__news-card {
     background: $white;
     padding: 20px 20px 0 20px;
     padding-bottom: 11px;
@@ -46,7 +46,7 @@
       }
     }
   }
-  .news__text {
+  .text__news-card {
     background: $white;
     padding: 0 20px;
     display: block;
@@ -66,7 +66,7 @@
       padding-bottom: 20px;
     }
   }
-  .footer__news-main {
+  .footer__news-card {
     background: $white;
     padding: 20px;
     justify-content: space-between;

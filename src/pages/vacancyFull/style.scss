@@ -1,23 +1,11 @@
 @import "../../sass/variables.scss";
-.back-group {
-    margin-top: 20px;
-    margin-left: -70px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: $green;
-    cursor: pointer;
-  }
+
 .vacancy-full-container {
   margin-bottom: 50px;
   height: 1074px;
-    background: $white;
+  background: $white;
 
   .vacancy__full-info {
-
     background: $white;
     padding: 20px;
     padding-top: 0;
@@ -40,14 +28,14 @@
     .task-list {
       margin-bottom: 20px;
     }
-    .condition-list{
+    .condition-list {
       margin-bottom: 10px;
     }
     .font-style__1417 {
       color: $grey;
     }
   }
-  .contact-btn{
+  .contact-btn {
     width: 100%;
     height: 40px;
     justify-content: center;

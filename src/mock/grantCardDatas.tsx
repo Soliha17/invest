@@ -2,7 +2,7 @@ import oxfordImg from "../assets/images/oxford-img.svg";
 import meetingImg from "../assets/images/meeting-img.svg";
 import mountainImg from "../assets/images/mountain-img.svg";
 
-export interface GrantsInfo {
+export interface GrantsCardTypes {
   id: number;
   path: string;
   firstInfo: string;
@@ -19,7 +19,7 @@ export interface GrantsInfo {
   img: string;
 }
 
-export const grantsInfo: GrantsInfo[] = [
+export const grantsCardDatas: GrantsCardTypes[] = [
   {
     id: 1,
     path: "/",

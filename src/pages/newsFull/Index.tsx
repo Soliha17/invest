@@ -54,8 +54,8 @@ function NewsFull() {
               <img src={backIcon} alt="back icon" />
             </span>
             {news.map((item) => (
-              <span className="new" key={item.id}>
-                <span className="top__news-main flex">
+              <span className="news-card" key={item.id}>
+                <span className="top__news-card flex">
                   <span className="info__top flex">
                     <img src={item.logoImg} alt="logo img" />
                     <span className="date-group flex">
@@ -89,12 +89,12 @@ function NewsFull() {
                     </span>
                   </span>
                 </span>
-                <span className="news__text">
+                <span className="text__news-card">
                   <h6 className="font-style__1619">{item.newsType}</h6>
                   <h4 className="font-style__2431">{item.newsTitle}</h4>
                   <p className="font-style__2024">{item.newsText}</p>
                 </span>
-                <Link to={"/"} className="news__img">
+                <Link to={"/"} className="img__news-card">
                   <img src={item.img} alt="news img" />
                 </Link>
                 <span className="full-text-box">
@@ -104,7 +104,7 @@ function NewsFull() {
                     </p>
                   ))}
                 </span>
-                <span className="footer__news-main flex">
+                <span className="footer__news-card flex">
                   <div className="left__footer flex">
                     <p className="flex">
                       <img src={heartIcon} alt="heart icon" />
@@ -132,7 +132,7 @@ function NewsFull() {
               </span>
             ))}
             <span
-              className="comment-group"
+              className="comments-group"
               style={openComments ? { display: "block" } : { display: "none" }}
             >
               <h3 className="font-style__2431">Izohlar</h3>

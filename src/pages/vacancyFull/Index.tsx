@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./style.scss";
+
 import { VacancyCardTypes, vacancyCards } from "../../mock/vacancyCardDatas";
 
 import copyIcon from "../../assets/icons/copy-icon.svg";
@@ -15,7 +16,7 @@ import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 import backIcon from "../../assets/icons/back-icon.svg";
 
 import Sidebar from "../../components/sidebar/Index";
-import VacancyMenu from "../../components/menu/Index";
+import Menu from "../../components/menu/Index";
 
 function VacancyFull() {
   const navigate = useNavigate();
@@ -41,19 +42,19 @@ function VacancyFull() {
         <span className="back-group" onClick={goBack}>
           <img src={backIcon} alt="back icon" />
         </span>
-        <span className="main-inside-container">
+        <span className="main-inner">
           <div className="vacancy-container vacancy-full-container">
             {vacancy.map((info) => (
-              <span className="vacancy-box" key={info.id}>
-                <span className="vacancy__top flex">
-                  <span className="info__top flex">
+              <span className="vacancy-card" key={info.id}>
+                <span className="vacancy-card__top flex">
+                  <span className="left__vacancy-card flex">
                     <img src={info.logoImg} alt="logo img" />
                     <span className="date-group flex">
                       <img src={watchIcon} alt="watch icon" />
                       <p className="font-style__1215">{info.vacancyDate}</p>
                     </span>
                   </span>
-                  <span className="three-dots">
+                  <span className="right__vacancy-card three-dots">
                     <img
                       src={threeDotsIcon}
                       onClick={() => setDots(!dots)}
@@ -74,12 +75,12 @@ function VacancyFull() {
                     </span>
                   </span>
                 </span>
-                <span className="vacancy__middle">
-                  <span className="vacancy__info-top">
+                <span className="vacancy-card__middle">
+                  <span className="vacancy-card__title-group">
                     <p className="font-style__2431">{info.vacancyTitle}</p>
                     <p className="font-style__1417">{info.vacancyType}</p>
                   </span>
-                  <span className="vacancy__info-bottom flex">
+                  <span className="vacancy-card__location-group flex">
                     <p className="font-style__1417 flex">
                       <img src={smallLocationIcon} alt="location icon" />
                       {info.vacancyLocation}
@@ -87,7 +88,7 @@ function VacancyFull() {
                     <p className="font-style__1417">{info.vacancySalary}</p>
                   </span>
                 </span>
-                <span className="vacancy__footer flex">
+                <span className="vacancy-card__footer flex">
                   <span className="left__footer">
                     <p className="flex">
                       <img src={eyeIcon} alt="eye icon" />
@@ -135,7 +136,7 @@ function VacancyFull() {
               </span>
             ))}
           </div>
-          <VacancyMenu />
+          <Menu />
         </span>
       </div>
     </div>

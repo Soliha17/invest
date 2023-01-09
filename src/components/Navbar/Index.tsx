@@ -7,9 +7,9 @@ import { imagePath } from "../../mock/navbarImagesDatas";
 import { userLinks } from "../../mock/navbarUserActionsDatas";
 
 function Navbar() {
-  const [login, setLogin] = useState(false);
+  const [openProfileMenu, setopenProfileMenu] = useState(false);
   function onChange() {
-    setLogin(true);
+    setopenProfileMenu(true);
   }
   return (
     <>
@@ -26,7 +26,7 @@ function Navbar() {
             placeholder="Izlash..."
           />
         </div>
-        <div className="header__action flex">
+        <div className="header__action-group flex">
           <button className="add-btn flex font-style__1619">
             Joylashtirish
             <img src={imagePath.plusIcon} alt="plus icon" />
@@ -36,7 +36,7 @@ function Navbar() {
               O‘zbekcha
               <img src={imagePath.dropdownIcon} alt="dropdown icon" />
             </button>
-            <span className="dropdown-content">
+            <span className="dropdown-content font-style__1619">
               <Link to="">Russian</Link>
               <Link to="">English</Link>
             </span>
@@ -47,30 +47,32 @@ function Navbar() {
               Kirish
             </button>
             <span
-              className="login-content"
-              style={login ? { display: "block" } : { display: "none" }}
+              className="content__login"
+              style={
+                openProfileMenu ? { display: "block" } : { display: "none" }
+              }
             >
               <img
                 src={imagePath.closeIcon}
                 className="close-icon"
                 alt="close icon"
-                onClick={() => setLogin(!login)}
+                onClick={() => setopenProfileMenu(!openProfileMenu)}
               />
-              <span className="profile-info flex">
+              <span className="profile-info__login flex">
                 <span className="camere-group flex">
                   <img src={imagePath.camereIcon} alt="camera" />
                 </span>
                 <span className="info-group">
                   <h6 className="font-style__1619">Qayum Murtazoyev</h6>
-                  <p>+9989 *** ** 99</p>
+                  <p className="font-style__1417">+9989 *** ** 99</p>
                 </span>
               </span>
-              <span className="profile-links flex">
+              <span className="profile-links__login flex">
                 {userLinks.map((item) => (
-                  <span className="profile-link flex" key={item.id}>
+                  <span className="profile-link__login flex" key={item.id}>
                     <Link to={item.path} className="link-title flex">
                       <img src={item.img} alt="saved icon" />
-                      <p className="fs-2024">{item.title}</p>
+                      <p className="font-style__2024">{item.title}</p>
                     </Link>
                     {item.rightImg ? (
                       <img src={item.rightImg} alt="right arrow icon" />

@@ -23,6 +23,9 @@ function EventsCard({
   img,
 }: EventsCardData) {
   const [dots, setDots] = useState(false);
+  function handleDots() {
+    setDots(!dots)
+  }
 
   return (
     <>
@@ -38,14 +41,10 @@ function EventsCard({
             </span>
             <span className="three-dots">
               <span>
-                <img
-                  src={threeDotsIcon}
-                  onClick={() => setDots(!dots)}
-                  alt="dots icon"
-                />
+                <img src={threeDotsIcon} onClick={handleDots} alt="dots icon" />
               </span>
               <span
-                className="dots-content"
+                className="dots-content font-style__1417"
                 style={dots ? { display: "block" } : { display: "none" }}
               >
                 <Link to="">

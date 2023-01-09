@@ -1,3 +1,26 @@
-.vacancy-feed{
-  width: 1007px !important;
+@import "../../../../sass/variables";
+.vacancy-feed {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  width: 1007px;
+  height: 65px;
+  padding: 12px 20px;
+  background: $white;
+  justify-content: space-between;
+  h1 {
+    color: $black;
+    font-weight: 600;
+  }
+  .action-group__vacancy-feed {
+    justify-content: space-between;
+    gap: 40px;
+    .action-box__vacancy-feed {
+      transition: all 5s ease-in;
+      p {
+        margin-top: -5px;
+        margin-left: 5px;
+        color: $black;
+      }
+    }
+  }
 }

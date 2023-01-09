@@ -4,10 +4,10 @@ import "./style.scss";
 
 function Menu() {
   return (
-    <div className="vacancy__menu">
+    <div className="menu">
       <h3 className="font-style__2024">Hudud</h3>
       <form>
-        <select className="select">
+        <select className="select__menu">
           <option value="viloyat">Viloyatni tanlang</option>
           <option value="buxoro">Buxoro</option>
           <option value="samarqand">Samarqand</option>
@@ -18,7 +18,7 @@ function Menu() {
       </form>
       <h4 className="font-style__1619">Tuman/shahar</h4>
       <form>
-        <select className="select">
+        <select className="select__menu">
           <option value="viloyat">Shaharni tanlang</option>
           <option value="buxoro">Buxoro</option>
           <option value="samarqand">Samarqand</option>
@@ -27,9 +27,9 @@ function Menu() {
           <option value="andijon">Andijon</option>
         </select>
       </form>
-      <span className="direction-box">
+      <span className="direction-box__menu box-direction">
         <h3 className="font-style__2024">Yo’nalish</h3>
-        <span className="direction__checkbox">
+        <span className="top__box-direction">
           <label className="checkbox">
             <input type="checkbox" />
             <span className="checkmark"></span>
@@ -71,9 +71,8 @@ function Menu() {
             Iqtisod
           </label>
         </span>
-        <span className="condition-box">
+        <span className="bottom__box-direction">
           <h3 className="font-style__2024">Holat</h3>
-
           <label className="checkbox">
             <input type="checkbox" />
             <span className="checkmark"></span>

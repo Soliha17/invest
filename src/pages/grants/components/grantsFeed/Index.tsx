@@ -9,7 +9,7 @@ function GrantsFeed() {
   return (
     <div className="grants-feed flex">
       <h1 className="font-style__3441">Grantlar lentasi</h1>
-      <span className="action-groups__grants-feed flex">
+      <span className="action-group__grants-feed flex">
         {grantsFeed.map((item) => (
           <Link to={"/"} className="action-box flex" key={item.id}>
             <span className="icon__action-box">

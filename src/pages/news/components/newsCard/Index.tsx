@@ -4,9 +4,6 @@ import { Link,useNavigate } from "react-router-dom";
 import "./style.scss";
 import { NewsCardData } from "../../../../mock/newsCardDatas";
 
-import smallDateIcon from "../../../../assets/icons/small-date-icon.svg";
-import smallLocationIcon from "../../../../assets/icons/small-location-icon.svg";
-
 import copyIcon from "../../../../assets/icons/copy-icon.svg";
 import spamIcon from "../../../../assets/icons/spam-icon.svg";
 import heartIcon from "../../../../assets/icons/heart-icon.svg";
@@ -37,8 +34,8 @@ function NewsCard({
 
   return (
     <>
-      <span className="new" key={id}>
-        <span className="top__news-main flex">
+      <span className="news-card" key={id}>
+        <span className="top__news-card flex">
           <span className="info__top flex">
             <img src={logoImg} alt="" />
             <span className="date-group flex">
@@ -70,15 +67,15 @@ function NewsCard({
             </span>
           </span>
         </span>
-        <span className="news__text" onClick={() => onSelect(id)}>
+        <span className="text__news-card" onClick={() => onSelect(id)}>
           <h6 className="font-style__1619">{newsType}</h6>
           <h4 className="font-style__2431">{newsTitle}</h4>
           <p className="font-style__2024">{newsText}</p>
         </span>
-        <Link className="news__img" to={""}>
+        <Link className="img__news-card" to={""}>
           <img src={img} alt="" />
         </Link>
-        <span className="footer__news-main flex">
+        <span className="footer__news-card flex">
           <span className="left__footer flex">
             <p className="flex">
               <img src={heartIcon} alt="heart icon" />

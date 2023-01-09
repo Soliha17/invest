@@ -1,13 +1,10 @@
 import React from "react";
 
-import "./style.scss";
-
 import VacancyMain from "./components/vacancyMain/Index";
 import Sidebar from "../../components/sidebar/Index";
 import VacancyFeed from "./components/vacancyFeed/Index";
-import VacancyMenu from "../../components/menu/Index";
+import Menu from "../../components/menu/Index";
 
-const vacancyFeedTitle: string = "Vakansiyalar lentasi";
 
 function Vacancy() {
   return (
@@ -16,9 +13,9 @@ function Vacancy() {
         <Sidebar />
         <div className="main-full">
           <VacancyFeed />
-          <div className="main-inside-container">
+          <div className="main-inner">
             <VacancyMain />
-            <VacancyMenu />
+            <Menu />
           </div>
         </div>
       </div>

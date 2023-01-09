@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "./style.scss";
 
@@ -10,6 +10,8 @@ import {
 } from "../../mock/sidebarLinksDatas";
 
 function Sidebar() {
+  let location = useLocation();
+
   return (
     <div className="sidebar flex">
       <span className="sidebar__links flex">
@@ -18,7 +20,7 @@ function Sidebar() {
             to={item.path}
             key={item.id}
             className={`sidebar__link flex ${
-              window.location.pathname === item.path && "active-link"
+              location.pathname === item.path && "active-link"
             }`}
           >
             <img src={item.img} alt={item.title} />
@@ -29,7 +31,7 @@ function Sidebar() {
       <span
         className="sidebar__pages"
         style={
-          window.location.pathname === "/vacancy"
+          location.pathname === "/vacancy"
             ? { display: "none" }
             : { display: "flex" }
         }
@@ -40,7 +42,7 @@ function Sidebar() {
             to={link.path}
             key={link.id}
             className={`sidebar__link flex ${
-              window.location.pathname === link.path && "active-page"
+              location.pathname === link.path && "active-page"
             }`}
           >
             <img src={link.img} alt="sidebar links icon" />

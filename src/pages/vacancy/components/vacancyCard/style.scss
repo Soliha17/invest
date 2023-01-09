@@ -1,53 +1,27 @@
 @import "../../../../sass/variables.scss";
 
-.vacancy-box {
+.vacancy-card {
   background: $white;
   height: 234px;
-  .vacancy__top {
+  .vacancy-card__top {
     padding: 20px;
     justify-content: space-between;
-    .info__top {
+    .left__vacancy-card {
       gap: 20px;
-      .date-group {
+      .date-group__vacancy-card {
         gap: 3px;
         p {
           color: $grey;
         }
       }
     }
-    .three-dots {
-      display: inline-flex;
-      position: relative;
-      .dots-content {
-        padding: 10px 20px;
-        display: none;
-        position: absolute;
-        top: 17px;
-        right: 0;
-        width: 180px;
-        overflow: auto;
-        background: $white;
-        border: 1px solid #d9d9d9;
-        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.12);
-        a {
-          text-align: center;
-          display: flex;
-          gap: 5px;
-          color: $black;
-          padding: 5px 0;
-        }
-      }
-      &:hover .dots-content {
-        display: block;
-      }
-    }
   }
-  .vacancy__middle {
+  .vacancy-card__middle {
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 0 20px;
-    .vacancy__info-top {
+    .vacancy-card__title-group {
       .font-style__2431 {
         margin-bottom: 5px;
         color: $black;
@@ -56,7 +30,7 @@
         color: $grey;
       }
     }
-    .vacancy__info-bottom {
+    .vacancy-card__location-group {
       gap: 20px;
       p {
         color: $grey;
@@ -66,7 +40,7 @@
       }
     }
   }
-  .vacancy__footer {
+  .vacancy-card__footer {
     padding: 24px 20px 20px 20px;
     justify-content: space-between;
     .left__footer {

@@ -1,22 +1,20 @@
 @import "../../sass/variables";
-.grants-full__top {
-  gap: 20px;
-  align-items: start;
-  .back-group {
-    margin-top: 20px;
-    margin-left: -70px;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: $green;
-    cursor: pointer;
-  }
-}
-.grants-container {
+
+.grants-full{
   padding-bottom: 151px;
-  .grants-box__auto {
+  .top__grants-full {
+    gap: 20px;
+    align-items: start;
+    .back-group {
+      margin-top: 20px;
+      margin-left: -70px;
+    }
+  }
+  .grants-card {
     display: block;
     height: auto !important;
+    width: 924px;
+    background: $white;
     .grants-full__top {
       align-items: start;
       gap: 20px;
@@ -27,52 +25,51 @@
         color: $grey;
       }
     }
-    .info-box__grants {
+    .info-box__grants-card {
       padding: 0 20px;
       display: flex;
       flex-direction: column;
-      ul{
-
+      ul {
         padding-left: 20px;
       }
-      ul li{
+      ul li {
         list-style-type: disc;
       }
       .first__info-box {
         padding-bottom: 21px !important;
-        h6{
+        h6 {
           margin-bottom: 10px;
         }
       }
-      .second__info-box{
+      .second__info-box {
         margin-bottom: 10px;
-        h6,p{
+        h6,
+        p {
           margin-bottom: 5px;
         }
       }
-      .third__info-box{
+      .third__info-box {
         margin-bottom: 40px;
-        h6{
+        h6 {
           margin-bottom: 5px;
         }
       }
     }
 
-    .footer__grants-main{
+    .footer__grants-card {
       margin-top: auto;
-      .left__footer{
-        a{
+      .left__footer {
+        a {
           color: $green !important;
           text-decoration-line: underline;
         }
       }
-      .right__footer{
-        p{
+      .right__footer {
+        p {
           gap: 5px;
           margin-right: 40px;
         }
       }
     }
-
   }
 }

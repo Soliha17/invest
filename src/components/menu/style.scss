@@ -1,5 +1,5 @@
 @import "../../sass/variables.scss";
-.vacancy__menu {
+.menu {
   padding: 20px;
   width: 272px;
   height: 581px;
@@ -15,12 +15,24 @@
     font-weight: 500;
     color: $black;
   }
-  .direction-box{
+  .select__menu {
+    width: 192px;
+    height: 40px;
+    border: 1px solid $onlyD;
+    color: #8c8c8c;
+    padding: 12px 11px 11px 10px;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a09f9f;
+  }
+  .box-direction {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-  }
-  .condition-box{
-margin-top: 20px;
+    .bottom__box-direction {
+      margin-top: 20px;
+    }
   }
 }
