@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-import Sidebar from "../../components/sidebar/Index";
+import Sidebar from "../../components/sidebarcha/Index";
 
 import { NewsCardData, newsCardDatas } from "../../mock/newsCardDatas";
 import { commentsData } from "../../mock/commentsDatas";

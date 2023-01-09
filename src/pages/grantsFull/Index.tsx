@@ -13,7 +13,7 @@ import threeDotsIcon from "../../assets/icons/three-dots-icon.svg";
 import eyeIcon from "../../assets/icons/eye-icon.svg";
 import sendIcon from "../../assets/icons/send-icon.svg";
 import savedIcon from "../../assets/icons/saved-icon.svg";
-import Sidebar from "../../components/sidebar/Index";
+import Sidebar from "../../components/sidebarcha/Index";
 import backIcon from "../../assets/icons/back-icon.svg";
 import smallDateIcon from "../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
