@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.scss"
 import copyIcon from "../../../../assets/icons/copy-icon.svg";
 import spamIcon from "../../../../assets/icons/spam-icon.svg";
@@ -12,16 +12,6 @@ import { GrantsCardTypes } from "../../../../mock/grantCardDatas";
 
 function GrantsCard({
   id,
-  path,
-  firstInfo,
-  secondInfo,
-  listInfo,
-  listInfoSecond,
-  listInfoThird,
-  thirdInfo,
-  firstList,
-  secondList,
-  thirdList,
   grantsType,
   text,
   img,

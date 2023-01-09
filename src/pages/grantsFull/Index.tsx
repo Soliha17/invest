@@ -30,7 +30,7 @@ function GrantsMain() {
 
   useEffect(() => {
     setGrants(result);
-  }, [id]);
+  }, []);
 
   function goBack() {
     navigate(-1);
