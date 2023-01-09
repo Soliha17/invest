@@ -1,6 +1,6 @@
 import React from "react";
 
-import Sidebar from "../../components/sidebarcha/Index";
+import Sidebar from "../../components/sidebar/Index";
 import EventsFeed from "./components/eventsFeed/Index";
 import Menu from "../../components/menu/Index";
 import EventsMain from "./components/eventsMain/Index";

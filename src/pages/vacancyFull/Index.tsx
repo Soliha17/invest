@@ -15,7 +15,7 @@ import savedIcon from "../../assets/icons/saved-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 import backIcon from "../../assets/icons/back-icon.svg";
 
-import Sidebar from "../../components/sidebarcha/Index";
+import Sidebar from "../../components/sidebar/Index";
 import Menu from "../../components/menu/Index";
 
 function VacancyFull() {
