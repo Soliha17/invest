@@ -35,7 +35,7 @@ function NewsFull() {
 
   useEffect(() => {
     setNews(result);
-  }, [id]);
+  }, []);
 
   function openCommentsFn() {
     setOpenComments(!openComments);

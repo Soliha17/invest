@@ -30,7 +30,7 @@ function VacancyFull() {
 
   useEffect(() => {
     setVacancy(result);
-  }, [id]);
+  }, []);
 
   function goBack() {
     navigate(-1);
