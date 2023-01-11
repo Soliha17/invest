@@ -1,8 +1,143 @@
 @import "../../sass/variables.scss";
-.events-full__card{
-  width: 889px;
-  background: aqua;
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
+.events-full {
+  overflow: hidden;
+  padding-bottom: 60px;
+  .events-full__card {
+    width: 889px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    .top__event-card {
+      display: flex;
+      flex-direction: column;
+
+      .data-group__event-card {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .img-group__event-card {
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+          height: 400px;
+          background-size: cover;
+        }
+      }
+
+      .btn-group__event-card {
+        align-self: end;
+        button {
+          width: 180px;
+          height: 40px;
+          color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          background: $green;
+        }
+      }
+    }
+    .bottom__event-card {
+      background: $white;
+      padding: 20px;
+      h1 {
+        margin-bottom: 10px;
+      }
+      .info__event-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .content__info {
+          display: flex;
+          justify-content: space-between;
+        }
+        .text__info {
+          font-weight: 400;
+        }
+      }
+    }
+    .right__data-group {
+      display: flex;
+      gap: 5px;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        p {
+          color: $grey;
+        }
+      }
+    }
+  }
+  .font-style__3441{
+    margin-top: 40px;
+  }
+  .same-cards-container {
+    margin-top: 40px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .same-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      min-width: 110%;
+
+      .same-card {
+        width: 379px;
+        background: $white;
+
+        .info__same-card {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          h5 {
+            margin-bottom: 5px;
+            font-weight: 500;
+          }
+          .font-style__1417 {
+            margin-bottom: 21px;
+          }
+          .bottom__same-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            .dates____same-card {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              .top__datess {
+                display: flex !important;
+                gap: 5px;
+                div {
+                  display: flex;
+                  gap: 3px;
+                  align-items: center;
+                  p {
+                    color: $grey;
+                  }
+                }
+              }
+              .font-style__1417 {
+                margin-top: 5px;
+                gap: 3px;
+                color: $grey;
+              }
+            }
+            .actions____same-card {
+              gap: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

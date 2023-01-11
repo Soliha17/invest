@@ -20,6 +20,6 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/dates/create-date.jsx"
-  ],
+, "src/components/calendar.jsx"  ],
   "exclude": ["node_modules"]
 }

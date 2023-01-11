@@ -16,6 +16,8 @@ function EventsMain() {
             text={item.text}
             location={item.location}
             img={item.img}
+            fullInfo={item.fullInfo}
+            fullImg={item.fullImg}
           />
         </React.Fragment>
       ))}

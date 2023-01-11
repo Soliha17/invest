@@ -7,10 +7,11 @@ import { imagePath } from "../../mock/navbarImagesDatas";
 import { userLinks } from "../../mock/navbarUserActionsDatas";
 
 function Navbar() {
-  const [openProfileMenu, setopenProfileMenu] = useState(false);
+  const [openProfileMenu, setOpenProfileMenu] = useState(false);
   function onChange() {
-    setopenProfileMenu(true);
+    setOpenProfileMenu(true);
   }
+
   return (
     <header className="header-container">
       <div className="header wrapper flex">
@@ -56,7 +57,7 @@ function Navbar() {
                 src={imagePath.closeIcon}
                 className="close-icon"
                 alt="close icon"
-                onClick={() => setopenProfileMenu(!openProfileMenu)}
+                onClick={() => setOpenProfileMenu(!openProfileMenu)}
               />
               <span className="profile-info__login flex">
                 <span className="camere-group flex">

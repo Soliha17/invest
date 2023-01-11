@@ -21,6 +21,16 @@
         margin-left: 5px;
         color: $black;
       }
+      &:nth-child(2) {
+        display: inline-block;
+        position: relative;
+        .calendar-container { 
+          position: absolute;
+          top: 40px;
+          right: -205px;
+          z-index: 999;
+        }
+      }
     }
   }
 }

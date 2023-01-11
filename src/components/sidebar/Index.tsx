@@ -33,6 +33,12 @@ function Sidebar() {
         style={
           location.pathname === "/vacancy"
             ? { display: "none" }
+            : location.pathname === "/events"
+            ? { display: "none" }
+            : location.pathname === "/volunteer"
+            ? { display: "none" }
+            : location.pathname === "/podcast"
+            ? { display: "none" }
             : { display: "flex" }
         }
       >
