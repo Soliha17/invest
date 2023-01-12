@@ -68,7 +68,7 @@ export const sidebarLinks = [
   },
   {
     id: 9,
-    path: "/volunteers",
+    path: "/volunteer",
     img: volunteerIcon,
     title: "Volontyorlik",
   },

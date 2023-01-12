@@ -7,6 +7,8 @@ import Grants from "../pages/grants/Index";
 import GrantsFull from "../pages/grantsFull/Index";
 import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
+import Volunteer from "../pages/volunteer/Index";
+import VolunteerFull from "../pages/volunteerFull/Index";
 
 interface Utils {
   id: number;
@@ -69,5 +71,17 @@ export const navbarUtils: Utils[] = [
     title: "EventsFull",
     path: "/events/:id",
     element: EventsFull,
+  },
+  {
+    id: 10,
+    title: "Volunteer",
+    path: "/volunteer",
+    element: Volunteer,
+  },
+  {
+    id: 11,
+    title: "VolunteerFull",
+    path: "/volunteer/:id",
+    element: VolunteerFull,
   },
 ];

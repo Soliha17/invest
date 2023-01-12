@@ -1,8 +1,10 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import "./style.scss";
 
 function Menu() {
+  const location = useLocation();
   return (
     <div className="menu">
       <h3 className="font-style__2024">Hudud</h3>
@@ -71,7 +73,14 @@ function Menu() {
             Iqtisod
           </label>
         </span>
-        <span className="bottom__box-direction">
+        <span
+          className="bottom__box-direction"
+          style={
+            location.pathname === "/volunteer"
+              ? { display: "none" }
+              : { display: "block" }
+          }
+        >
           <h3 className="font-style__2024">Holat</h3>
           <label className="checkbox">
             <input type="checkbox" />
