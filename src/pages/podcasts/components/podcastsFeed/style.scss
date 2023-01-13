@@ -1,0 +1,36 @@
+@import "../../../../sass/variables";
+.events-feed {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  width: 1007px;
+  height: 65px;
+  padding: 12px 20px;
+  background: $white;
+  justify-content: space-between;
+  h1 {
+    color: $black;
+    font-weight: 600;
+  }
+  .action-group__events-feed {
+    justify-content: space-between;
+    gap: 40px;
+    .action-box {
+      transition: all 5s ease-in;
+      p {
+        margin-top: -5px;
+        margin-left: 5px;
+        color: $black;
+      }
+      &:nth-child(2) {
+        display: inline-block;
+        position: relative;
+        .calendar-container {
+          position: absolute;
+          top: 40px;
+          right: -205px;
+          z-index: 999;
+        }
+      }
+    }
+  }
+}

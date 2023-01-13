@@ -1,0 +1,62 @@
+@import "../../../../sass/variables.scss";
+.podcasts-main {
+  width: 696px;
+  margin-top: 12px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .top__podcasts-main {
+    h3 {
+      margin-bottom: 19px;
+    }
+    .content__podcasts-main {
+      width: 696px;
+      height: 243px;
+      display: flex;
+      background: linear-gradient(
+          90deg,
+          #282828 53.53%,
+          rgba(40, 40, 40, 0) 92.88%
+        ),
+        url("../../../../assets/images/it-bg-img.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center right;
+      .info__content {
+        padding: 20px;
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $white;
+        .listen-btn {
+          width: 175px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $green;
+          color: $white;
+          border: none;
+        }
+      }
+    }
+  }
+  .bottom__podcasts-main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    h4.font-style__3239 {
+      margin-top: 40px;
+    }
+    .content__podcasts-main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

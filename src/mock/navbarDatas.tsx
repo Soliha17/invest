@@ -9,6 +9,8 @@ import News from "../pages/news/Index";
 import NewsFull from "../pages/newsFull/Index";
 import Volunteer from "../pages/volunteer/Index";
 import VolunteerFull from "../pages/volunteerFull/Index";
+import Podcasts from "../pages/podcasts/Index";
+import ItPodcast from "../pages/podcasts/itPodcast/Index";
 
 interface Utils {
   id: number;
@@ -83,5 +85,17 @@ export const navbarUtils: Utils[] = [
     title: "VolunteerFull",
     path: "/volunteer/:id",
     element: VolunteerFull,
+  },
+  {
+    id: 12,
+    title: "Podcasts",
+    path: "/podcasts",
+    element: Podcasts,
+  },
+  {
+    id: 13,
+    title: "Podcasts",
+    path: "/podcasts/it",
+    element: ItPodcast,
   },
 ];

@@ -1,0 +1,42 @@
+@import "../../../../sass/variables.scss";
+.podcast-menu {
+  position: sticky;
+  top: 115px;
+  right: 90px;
+  padding: 20px;
+  padding-top: 0;
+  width: 272px;
+  height: fit-content;
+  background: $white;
+  h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $black;
+  }
+  h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: $black;
+  }
+  .select__menu {
+    width: 192px;
+    height: 40px;
+    border: 1px solid $onlyD;
+    color: #8c8c8c;
+    padding: 12px 11px 11px 10px;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a09f9f;
+  }
+  .box-direction {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .bottom__box-direction {
+      margin-top: 20px;
+    }
+  }
+}

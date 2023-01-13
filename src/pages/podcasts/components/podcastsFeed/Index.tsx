@@ -9,7 +9,7 @@ import dateIcon from "../../../../assets/icons/date-icon.svg";
 
 import "./style.scss";
 
-function VolunteerFeed() {
+function PodcastsFeed() {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
 
@@ -45,4 +45,4 @@ function VolunteerFeed() {
   );
 }
 
-export default VolunteerFeed;
+export default PodcastsFeed;

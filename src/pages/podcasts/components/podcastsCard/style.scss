@@ -1,0 +1,45 @@
+@import "../../../../sass/variables.scss";
+.podcast-card {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  .top__podcast-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom__podcast-card {
+    padding: 10px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h4{
+      margin-bottom: 5px;
+    }
+    h5{
+      margin-bottom: 10px;
+    }
+    .footer__podcast-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left__footer {
+        display: flex;
+        gap: 2px;
+      }
+      .right__footer {
+        display: flex;
+        gap: 10px;
+        .action-group__footer:first-child {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+        }
+      }
+    }
+  }
+}
