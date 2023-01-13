@@ -8,8 +8,8 @@ import copyIcon from "../../../../assets/icons/copy-icon.svg";
 import spamIcon from "../../../../assets/icons/spam-icon.svg";
 import threeDotsIcon from "../../../../assets/icons/three-dots-icon.svg";
 import sendIcon from "../../../../assets/icons/send-icon.svg";
-import watchIcon from "../../../../assets/icons/small-watch-icon.svg";
 import savedIcon from "../../../../assets/icons/saved-icon.svg";
+import watchIcon from "../../../../assets/icons/small-watch-icon.svg";
 import smallDateIcon from "../../../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../../../assets/icons/small-location-icon.svg";
 

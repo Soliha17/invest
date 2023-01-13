@@ -23,7 +23,9 @@ function PodcastsMain() {
   return (
     <div className="podcasts-main">
       <span className="top__podcasts-main">
-        <h3 className="font-style__3239" onClick={onGo}>IT</h3>
+        <h3 className="font-style__3239" onClick={onGo}>
+          IT
+        </h3>
         <span className="content__podcasts-main">
           <span className="info__content">
             <h6 className="font-style__1215">So’ngilar</h6>

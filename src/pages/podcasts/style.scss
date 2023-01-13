@@ -1,5 +1,208 @@
-.podcast-full{
-  .main-inner{
+@import "../../sass/variables.scss";
+.podcast-main{
+  position: relative;
+}
+.podcast-full {
+  .main-inner {
     gap: 40px;
+    position: relative;
+  }
+}
+.player-container {
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  width: 1400px;
+  background: aqua;
+  .rhap_container {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    .rhap_progress-bar {
+      height: 24px;
+    }
+    .rhap_progress-indicator {
+      height: 100%;
+      border-radius: 1px;
+      top: 0;
+      width: 10px;
+      background-color: $green;
+    }
+    .rhap_progress-filled {
+      background-color: $green;
+    }
+  }
+}
+.listent-info-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  h1 {
+    margin-bottom: 5px;
+  }
+}
+.rhap_main-controls {
+  order: -1;
+  margin-right: 30px;
+}
+.player-footer {
+  padding-right: 10px;
+  .three-dots {
+    .dots-content {
+      flex-direction: column;
+      gap: 10px;
+      top: -100px;
+      span {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+}
+.rhap_footer {
+  margin-top: 13px;
+}
+.player-info {
+  position: absolute;
+  right: 100px;
+  .login__header {
+    transition: all 15s linear;
+    display: inline-block;
+    position: relative;
+    button {
+      gap: 8px;
+      border: none;
+      background: none;
+    }
+    .content__login {
+      padding: 30px;
+      width: 546px;
+      height: 406px;
+      position: relative;
+      top: 100px;
+      right: -10px;
+      display: block;
+      // position: absolute;
+      // right: 0;
+      overflow: auto;
+      background: $white;
+      border: 1px solid $lightblue;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+      .close-icon {
+        position: absolute;
+        right: 24px;
+        top: 20px;
+      }
+      .profile-info__login {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .camere-group {
+          p {
+            margin-left: 6px;
+            padding: 2px 5px;
+            display: flex;
+            align-items: center;
+            width: 113px;
+            height: 19px;
+            background: #f0f0f0;
+          }
+        }
+        .info-group {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          h6 {
+            color: #848484;
+          }
+          p {
+            font-weight: 400;
+          }
+        }
+        .top__dates {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          span {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+          }
+        }
+        .action-group {
+          margin-top: 5px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .three-dots-group {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+          }
+        }
+      }
+      .profile-links__login {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .music-group {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .left__music-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+        }
+        .switch-input {
+          height: 0;
+          width: 0;
+          visibility: hidden;
+        }
+
+        .switch-label {
+          cursor: pointer;
+          text-indent: -9999px;
+          width: 40px;
+          height: 24px;
+          background: black;
+          display: block;
+          border-radius: 12px;
+          position: relative;
+        }
+
+        .switch-label:after {
+          content: "";
+          position: absolute;
+          top: 1px;
+          left: 1px;
+          width: 23px;
+          height: 22px;
+          background: #fff;
+          border-radius: 50%;
+          transition: 0.3s;
+        }
+
+        .switch-input:checked + .switch-label {
+          background: $green;
+        }
+
+        .switch-input:checked + .switch-label:after {
+          left: calc(100% - 1px);
+          transform: translateX(-100%);
+        }
+
+        .switch-label:active:after {
+          width: 30px;
+        }
+      }
+    }
   }
 }
