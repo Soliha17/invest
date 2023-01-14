@@ -11,6 +11,8 @@ import Volunteer from "../pages/volunteer/Index";
 import VolunteerFull from "../pages/volunteerFull/Index";
 import Podcasts from "../pages/podcasts/Index";
 import ItPodcast from "../pages/podcasts/itPodcast/Index";
+import Modal from "../components/modal/Index";
+import SuccessModal from "../components/successModal/Index";
 
 interface Utils {
   id: number;
@@ -97,5 +99,17 @@ export const navbarUtils: Utils[] = [
     title: "Podcasts",
     path: "/podcasts/it",
     element: ItPodcast,
+  },
+  {
+    id: 14,
+    title: "Modal",
+    path: "/modal",
+    element: Modal,
+  },
+  {
+    id: 15,
+    title: "Success Modal",
+    path: "/smodal",
+    element: SuccessModal,
   },
 ];

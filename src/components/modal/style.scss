@@ -1,0 +1,45 @@
+.modal-container {
+  height: 100%;
+  background: #f5f5f5;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .close-icon {
+    position: absolute;
+    top: 40px;
+    right: 140px;
+  }
+  .modal-content {
+    margin-top: 73px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .modal-box {
+      padding: 40px;
+      width: 800px;
+      height: 170px;
+      display: flex;
+      gap: 21px;
+      flex-direction: column;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      input {
+        width: 230px;
+        padding-bottom: 5px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #a09f9f;
+      }
+    }
+    .send-btn {
+      align-self: end;
+      width: 151px;
+      height: 59px;
+      background: #008b34;
+      color: white;
+      border: none;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./style.scss";
@@ -15,6 +15,7 @@ import { podcastsArtCardDatas } from "../../../../mock/podcastsArtCardDatas";
 import { podcastsEcoCardDatas } from "../../../../mock/podcastsEcoCardDatas";
 
 function PodcastsMain() {
+  const [bug, setBug] = useState<number>(1);
   const navigate = useNavigate();
   function onGo() {
     navigate(`/podcasts/it`);
@@ -49,6 +50,8 @@ function PodcastsMain() {
               text={item.text}
               img={item.img}
               podcastTime={item.podcastTime}
+              bug={bug}
+              setBug={setBug}
             />
           </React.Fragment>
         ))}

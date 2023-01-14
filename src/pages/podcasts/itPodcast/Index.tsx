@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import "./style.scss";
 
@@ -10,6 +10,8 @@ import PodcastsFeed from "../components/podcastsFeed/Index";
 import PodcastMenu from "../components/podcastMenu/Index";
 
 function ItPodcast() {
+  const [bug, setBug] = useState<number>(1);
+
   return (
     <div className="wrapper">
       <div className="main">
@@ -45,6 +47,8 @@ function ItPodcast() {
                       text={item.text}
                       img={item.img}
                       podcastTime={item.podcastTime}
+                      bug={bug}
+                      setBug={setBug}
                     />
                   </React.Fragment>
                 ))}

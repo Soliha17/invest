@@ -18,32 +18,45 @@ import smallSavedIcon from "../../../../assets/icons/small-saved-icon.svg";
 // !showItems[id - 1]
 //   ? { borderColor: "#008B34" }
 //   : { borderColor: "transparent" }
-function PodcastsCard({ id, img, title, text, podcastTime }: PodcastsCardData) {
-  const [showItems, setShowItems] = useState(() =>
-    Array(podcastsCardDatas.length).fill(false)
-  );
-  console.log("ID", id);
-  console.log(showItems);
+export interface IProps {
+  id: number;
+  title: string;
+  text: string;
+  podcastTime: string;
+  img: any;
+  bug: number;
+  setBug: Function;
+}
+
+function PodcastsCard({
+  id,
+  img,
+  title,
+  text,
+  podcastTime,
+  bug,
+  setBug,
+}: IProps) {
+  // const [showItems, setShowItems] = useState(() =>
+  //   Array(podcastsCardDatas.length).fill(false)
+  // );
 
   return (
     <div
       className="podcast-card"
-      onClick={() =>
-        setShowItems((elements) =>
-          elements.map((element, elementIndex) =>
-            id - 1 === elementIndex ? !showItems[id - 1] : element
-          )
-        )
-      }
-      style={{ borderColor: !showItems[id - 1] ? "transparent" : "#008B34" }}
+      style={{
+        border: bug === id ? "1px solid green" : "1px solid transparent",
+      }}
+      onClick={() => setBug(id)}
     >
       <span className="top__podcast-card">
         <img
           src={img}
           alt="podcast img"
-          // style={{
-          //   padding: !showItems[id - 1] ? "10px 3px 5px 3px" : "0",
-          // }}
+          style={{
+            padding: bug === id ? "10px 3px 5px 3px" : "0",
+            width: "309px"
+          }}
         />
       </span>
       <span className="bottom__podcast-card">
