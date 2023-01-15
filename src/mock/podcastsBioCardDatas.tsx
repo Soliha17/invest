@@ -10,14 +10,14 @@ export interface PodcastsBioCardData {
 }
 export const podcastsBioCardDatas: PodcastsBioCardData[] = [
   {
-    id: 1,
+    id: 5,
     title: "Raqamli PSR",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",
     img: img5,
   },
   {
-    id: 2,
+    id: 6,
     title: "Yangi kashfiyot",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",

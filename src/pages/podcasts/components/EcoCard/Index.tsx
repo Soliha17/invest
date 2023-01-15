@@ -8,12 +8,34 @@ import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";
 import smallShareIcon from "../../../../assets/icons/small-share-icon.svg";
 import smallSavedIcon from "../../../../assets/icons/small-saved-icon.svg";
+import { IProps } from "../podcastsCard/Index";
 
-function EcoCard({ id, img, title, text, podcastTime }: PodcastsCardData) {
+function EcoCard({
+  id,
+  img,
+  title,
+  text,
+  podcastTime,
+  cardHover,
+  setCardHover,
+}: IProps) {
   return (
-    <div className="podcast-card">
+    <div
+      className="podcast-card"
+      style={{
+        border: cardHover === id ? "1px solid green" : "1px solid transparent",
+      }}
+      onClick={() => setCardHover(id)}
+    >
       <span className="top__podcast-card">
-        <img src={img} alt="podcast img" />
+        <img
+          src={img}
+          style={{
+            padding: cardHover === id ? "10px 3px 5px 3px" : "0",
+            width: "309px",
+          }}
+          alt="podcast img"
+        />
       </span>
       <span className="bottom__podcast-card">
         <h4 className="font-style__1619">{title}</h4>

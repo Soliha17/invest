@@ -15,7 +15,7 @@ import { podcastsArtCardDatas } from "../../../../mock/podcastsArtCardDatas";
 import { podcastsEcoCardDatas } from "../../../../mock/podcastsEcoCardDatas";
 
 function PodcastsMain() {
-  const [bug, setBug] = useState<number>(1);
+  const [cardHover, setCardHover] = useState<number>(0);
   const navigate = useNavigate();
   function onGo() {
     navigate(`/podcasts/it`);
@@ -50,8 +50,8 @@ function PodcastsMain() {
               text={item.text}
               img={item.img}
               podcastTime={item.podcastTime}
-              bug={bug}
-              setBug={setBug}
+              cardHover={cardHover}
+              setCardHover={setCardHover}
             />
           </React.Fragment>
         ))}
@@ -65,6 +65,8 @@ function PodcastsMain() {
                 text={item.text}
                 img={item.img}
                 podcastTime={item.podcastTime}
+                cardHover={cardHover}
+                setCardHover={setCardHover}
               />
             </React.Fragment>
           ))}
@@ -79,6 +81,8 @@ function PodcastsMain() {
                 text={item.text}
                 img={item.img}
                 podcastTime={item.podcastTime}
+                cardHover={cardHover}
+                setCardHover={setCardHover}
               />
             </React.Fragment>
           ))}
@@ -93,6 +97,8 @@ function PodcastsMain() {
                 text={item.text}
                 img={item.img}
                 podcastTime={item.podcastTime}
+                cardHover={cardHover}
+                setCardHover={setCardHover}
               />
             </React.Fragment>
           ))}

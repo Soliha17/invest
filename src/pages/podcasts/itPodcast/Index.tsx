@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 import "./style.scss";
 
@@ -10,7 +10,7 @@ import PodcastsFeed from "../components/podcastsFeed/Index";
 import PodcastMenu from "../components/podcastMenu/Index";
 
 function ItPodcast() {
-  const [bug, setBug] = useState<number>(1);
+  const [cardHover, setCardHover] = useState<number>(0);
 
   return (
     <div className="wrapper">
@@ -39,16 +39,16 @@ function ItPodcast() {
                 </span>
               </span>
               <span className="bottom__podcasts-main">
-                {podcastsCardItDatas.map((item) => (
+                {podcastsCardItDatas.map((item, index) => (
                   <React.Fragment key={item.id}>
                     <PodcastsCard
-                      id={item.id}
+                      id={index}
                       title={item.title}
                       text={item.text}
                       img={item.img}
                       podcastTime={item.podcastTime}
-                      bug={bug}
-                      setBug={setBug}
+                      cardHover={cardHover}
+                      setCardHover={setCardHover}
                     />
                   </React.Fragment>
                 ))}

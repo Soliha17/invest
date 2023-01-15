@@ -10,14 +10,14 @@ export interface PodcastsArtCardData {
 }
 export const podcastsArtCardDatas: PodcastsArtCardData[] = [
   {
-    id: 1,
+    id: 7,
     title: "Ranglar jilosi",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",
     img: img7,
   },
   {
-    id: 2,
+    id: 8,
     title: "Ilhom parisi",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",

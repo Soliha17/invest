@@ -11,21 +11,15 @@ import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";
 import smallShareIcon from "../../../../assets/icons/small-share-icon.svg";
 import smallSavedIcon from "../../../../assets/icons/small-saved-icon.svg";
-// const [cardActive, setCardActive] = useState(false);
-// function isCardActive() {
-//   setCardActive(true);
-// }
-// !showItems[id - 1]
-//   ? { borderColor: "#008B34" }
-//   : { borderColor: "transparent" }
+
 export interface IProps {
   id: number;
   title: string;
   text: string;
   podcastTime: string;
   img: any;
-  bug: number;
-  setBug: Function;
+  cardHover: number;
+  setCardHover: Function;
 }
 
 function PodcastsCard({
@@ -34,28 +28,25 @@ function PodcastsCard({
   title,
   text,
   podcastTime,
-  bug,
-  setBug,
+  cardHover,
+  setCardHover,
 }: IProps) {
-  // const [showItems, setShowItems] = useState(() =>
-  //   Array(podcastsCardDatas.length).fill(false)
-  // );
 
   return (
     <div
       className="podcast-card"
       style={{
-        border: bug === id ? "1px solid green" : "1px solid transparent",
+        border: cardHover === id ? "1px solid green" : "1px solid transparent",
       }}
-      onClick={() => setBug(id)}
+      onClick={() => setCardHover(id)}
     >
       <span className="top__podcast-card">
         <img
           src={img}
           alt="podcast img"
           style={{
-            padding: bug === id ? "10px 3px 5px 3px" : "0",
-            width: "309px"
+            padding: cardHover === id ? "10px 3px 5px 3px" : "0",
+            width: "309px",
           }}
         />
       </span>

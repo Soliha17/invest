@@ -1,0 +1,51 @@
+@import "../../sass/variables";
+
+.comments-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 767px;
+  .comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .top__comment {
+      gap: 5px;
+      .profile-info {
+        h6 {
+          color: $black;
+        }
+        p {
+          color: $grey;
+          gap: 3px;
+        }
+      }
+    }
+    .middle__comment {
+      p {
+        color: $black;
+      }
+    }
+    .bottom__comment {
+      gap: 20px;
+      p:first-child {
+        color: $grey;
+      }
+      p:last-child {
+        gap: 3px;
+        color: $red;
+      }
+    }
+  }
+  .no-comment {
+    display: block;
+    img {
+      margin-top: 40px;
+    }
+    h4 {
+      margin-top: 66px;
+      text-align: center;
+      color: $black;
+    }
+  }
+}

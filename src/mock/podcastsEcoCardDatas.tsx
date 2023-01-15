@@ -10,14 +10,14 @@ export interface PodcastsEcoCardData {
 }
 export const podcastsEcoCardDatas: PodcastsEcoCardData[] = [
   {
-    id: 1,
+    id: 9,
     title: "Shamol energiyasi",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",
     img: img9,
   },
   {
-    id: 2,
+    id: 10,
     title: "Yashil bino",
     text: "GitHub Actions vulnerability, US bans sales of Huawei, TrueNAS open source hyperconv...",
     podcastTime: "21 minut",
