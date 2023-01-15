@@ -14,11 +14,15 @@ import smallWatchIcon from "../../assets/icons/small-watch-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-watch-icon.svg";
 import sendIcon from "../../assets/icons/send-icon.svg";
 import savedIcon from "../../assets/icons/saved-icon.svg";
+import Modal from "../../components/modal/Index";
+import SuccessModal from "../../components/successModal/Index";
 
 function EventsFull() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [events, setEvents] = useState<EventsCardData[]>([]);
+  const [modal1Open, setModal1Open] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
 
   let result: EventsCardData[] = eventsCardDatas.filter((item) => {
     return item.id === Number(id);
@@ -31,6 +35,9 @@ function EventsFull() {
   function goBack() {
     navigate(-1);
   }
+  const closeModal1 = () => {
+    setModal1Open(false);
+  };
   return (
     <div className="main wrapper">
       <Sidebar />
@@ -64,7 +71,10 @@ function EventsFull() {
                   <img src={item.fullImg} alt={item.title} />
                 </span>
                 <span className="btn-group__event-card">
-                  <button className="sign-up font-style__1619">
+                  <button
+                    className="sign-up font-style__1619"
+                    onClick={() => setModal1Open(true)}
+                  >
                     Ro’yxatdan o’tish
                   </button>
                 </span>
@@ -90,7 +100,7 @@ function EventsFull() {
               </span>
             </span>
           ))}
-            <h1 className="font-style__3441">O‘xshash tadbirlar</h1>
+          <h1 className="font-style__3441">O‘xshash tadbirlar</h1>
           <div className="same-cards-container">
             <span className="same-cards">
               {sameEventCardDatas.map((item) => (
@@ -128,6 +138,20 @@ function EventsFull() {
           </div>
         </div>
       </div>
+      {modal1Open && (
+        <Modal
+          toggleModal={() => setModal1Open(false)}
+          isOpen={modal1Open}
+          openModal2={() => setModal2Open(true)}
+        />
+      )}
+      {!modal1Open && (
+        <SuccessModal
+          toggleModal={() => setModal2Open(false)}
+          isOpen={modal2Open}
+          closeModal1={closeModal1}
+        />
+      )}
     </div>
   );
 }

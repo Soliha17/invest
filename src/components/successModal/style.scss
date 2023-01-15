@@ -1,16 +1,21 @@
 .success-modal {
-  height: 800px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
   .content__success-modal {
     padding: 30px;
     width: 380px;
     height: 262px;
     position: relative;
     background: #ffffff;
-    .close-img{
+    .close-img {
       position: absolute;
       top: 20px;
       right: 20px;
@@ -20,10 +25,10 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      .success-img{
+      .success-img {
         margin-bottom: 30px;
       }
-      p{
+      p {
         color: #676767;
       }
     }

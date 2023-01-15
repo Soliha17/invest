@@ -17,10 +17,14 @@ import backIcon from "../../assets/icons/back-icon.svg";
 
 import Sidebar from "../../components/sidebar/Index";
 import Menu from "../../components/menu/Index";
+import Modal from "../../components/modal/Index";
+import SuccessModal from "../../components/successModal/Index";
 
 function VacancyFull() {
   const navigate = useNavigate();
   const { id } = useParams();
+  const [modal1Open, setModal1Open] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
   const [dots, setDots] = useState(false);
   const [vacancy, setVacancy] = useState<VacancyCardTypes[]>([]);
 
@@ -35,6 +39,10 @@ function VacancyFull() {
   function goBack() {
     navigate(-1);
   }
+
+  const closeModal1 = () => {
+    setModal1Open(false);
+  };
   return (
     <div className="main wrapper">
       <Sidebar />
@@ -130,7 +138,10 @@ function VacancyFull() {
                     tugmani bosing.
                   </p>
                 </span>
-                <button className="contact-btn flex font-style__1619">
+                <button
+                  className="contact-btn flex font-style__1619"
+                  onClick={() => setModal1Open(true)}
+                >
                   Aloqaga chiqish
                 </button>
               </span>
@@ -139,6 +150,19 @@ function VacancyFull() {
           <Menu />
         </span>
       </div>
+      {modal1Open && (
+        <Modal
+          toggleModal={() => setModal1Open(false)}
+          isOpen={modal1Open}
+          openModal2={() => setModal2Open(true)}
+        />
+      )}
+
+      <SuccessModal
+        toggleModal={() => setModal2Open(false)}
+        isOpen={modal2Open}
+        closeModal1={closeModal1}
+      />
     </div>
   );
 }

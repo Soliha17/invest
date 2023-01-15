@@ -1,15 +1,34 @@
-import React from 'react'
+import React from "react";
 
 import "./style.scss";
 
 import closeIcon from "../../assets/icons/close-icon.svg";
 import successIcon from "../../assets/icons/two-checked-icon.svg";
 
-function SuccessModal() {
+interface Modal2Props {
+  toggleModal: () => void;
+  closeModal1: () => void;
+  isOpen: boolean;
+}
+
+const SuccessModal: React.FC<Modal2Props> = ({
+  toggleModal,
+  isOpen,
+  closeModal1,
+}) => {
+  if (!isOpen) return null;
   return (
     <div className="success-modal wrapper">
       <span className="content__success-modal">
-        <img src={closeIcon} className="close-img" alt="close icon" />
+        <img
+          src={closeIcon}
+          className="close-img"
+          onClick={() => {
+            toggleModal();
+            closeModal1();
+          }}
+          alt="close icon"
+        />
         <span className="text-content">
           <span className="success-img">
             <img src={successIcon} alt="checked icon" />
@@ -25,6 +44,6 @@ function SuccessModal() {
       </span>
     </div>
   );
-}
+};
 
-export default SuccessModal
+export default SuccessModal;
