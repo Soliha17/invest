@@ -1,0 +1,56 @@
+@import "../../sass/variables.scss";
+.player-container {
+  position: sticky;
+  bottom: 0;
+  left: 6%;
+  width: 1400px;
+  .rhap_container {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    .rhap_progress-bar {
+      height: 24px;
+    }
+    .rhap_progress-indicator {
+      height: 100%;
+      border-radius: 1px;
+      top: 0;
+      width: 10px;
+      background-color: $green;
+    }
+    .rhap_progress-filled {
+      background-color: $green;
+    }
+  }
+}
+
+.listent-info-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  h1 {
+    margin-bottom: 5px;
+  }
+}
+.rhap_main-controls {
+  order: -1;
+  margin-right: 30px;
+}
+.player-footer {
+  padding-right: 10px;
+  .three-dots {
+    .dots-content {
+      flex-direction: column;
+      gap: 10px;
+      top: -100px;
+      span {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+}
+.rhap_footer {
+  margin-top: 13px;
+}
