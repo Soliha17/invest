@@ -47,12 +47,12 @@ const ItPodcast: React.FC<MainProps> = ({
                 </span>
               </span>
               <span className="bottom__podcasts-main">
-                {podcastsCardItDatas.map((item, index) => (
+                {podcastsCardItDatas.map((item) => (
                   <React.Fragment key={item.id}>
                     <PodcastsCard
                       onClick={() => handleCardClick(item.id.toString())}
                       selected={item.id.toString() === selectedCardId}
-                      id={index}
+                      id={item.id}
                       title={item.title}
                       text={item.text}
                       img={item.img}

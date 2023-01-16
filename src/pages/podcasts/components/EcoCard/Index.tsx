@@ -34,7 +34,7 @@ function EcoCard({
           onClick={onClick}
           style={{
             padding: cardHover === id ? "10px 3px 5px 3px" : "0",
-            width: "309px",
+            width: cardHover === id ? "309px" : "100%",
           }}
           alt="podcast img"
         />

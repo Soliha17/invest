@@ -15,8 +15,8 @@ export interface IProps {
   img: any;
   cardHover: number;
   setCardHover: Function;
-  onClick: () => void
-  selected:boolean,
+  onClick: () => void;
+  selected: boolean;
 }
 
 function PodcastsCard({
@@ -29,7 +29,6 @@ function PodcastsCard({
   setCardHover,
   onClick,
 }: IProps) {
-
   return (
     <div
       className="podcast-card"
@@ -45,7 +44,7 @@ function PodcastsCard({
           onClick={onClick}
           style={{
             padding: cardHover === id ? "10px 3px 5px 3px" : "0",
-            width: "309px",
+            width: cardHover === id ? "309px" : "100%",
           }}
         />
       </span>
