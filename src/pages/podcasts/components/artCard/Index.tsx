@@ -2,8 +2,6 @@ import React from "react";
 
 import "./style.scss";
 
-import { PodcastsCardData } from "../../../../mock/podcastsCardDatas";
-
 import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";
 import smallShareIcon from "../../../../assets/icons/small-share-icon.svg";
@@ -18,6 +16,7 @@ function ArtCard({
   podcastTime,
   cardHover,
   setCardHover,
+  onClick,
 }: IProps) {
   return (
     <div
@@ -30,6 +29,7 @@ function ArtCard({
       <span className="top__podcast-card">
         <img
           src={img}
+          onClick={onClick}
           style={{
             padding: cardHover === id ? "10px 3px 5px 3px" : "0",
             width: "309px",

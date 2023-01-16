@@ -14,7 +14,15 @@ import { podcastsBioCardDatas } from "../../../../mock/podcastsBioCardDatas";
 import { podcastsArtCardDatas } from "../../../../mock/podcastsArtCardDatas";
 import { podcastsEcoCardDatas } from "../../../../mock/podcastsEcoCardDatas";
 
-function PodcastsMain() {
+interface MainProps {
+  handleCardClick: (id: string) => void;
+  selectedCardId: string | null;
+}
+
+const PodcastsMain: React.FC<MainProps> = ({
+  handleCardClick,
+  selectedCardId,
+}) => {
   const [cardHover, setCardHover] = useState<number>(0);
   const navigate = useNavigate();
   function onGo() {
@@ -45,6 +53,8 @@ function PodcastsMain() {
         {podcastsCardDatas.map((item) => (
           <React.Fragment key={item.id}>
             <PodcastsCard
+              onClick={() => handleCardClick(item.id.toString())}
+              selected={item.id.toString() === selectedCardId}
               id={item.id}
               title={item.title}
               text={item.text}
@@ -60,6 +70,8 @@ function PodcastsMain() {
           {podcastsBioCardDatas.map((item) => (
             <React.Fragment key={item.id}>
               <BioCard
+                onClick={() => handleCardClick(item.id.toString())}
+                selected={item.id.toString() === selectedCardId}
                 id={item.id}
                 title={item.title}
                 text={item.text}
@@ -76,6 +88,8 @@ function PodcastsMain() {
           {podcastsArtCardDatas.map((item) => (
             <React.Fragment key={item.id}>
               <ArtCard
+                onClick={() => handleCardClick(item.id.toString())}
+                selected={item.id.toString() === selectedCardId}
                 id={item.id}
                 title={item.title}
                 text={item.text}
@@ -92,6 +106,8 @@ function PodcastsMain() {
           {podcastsEcoCardDatas.map((item) => (
             <React.Fragment key={item.id}>
               <EcoCard
+                onClick={() => handleCardClick(item.id.toString())}
+                selected={item.id.toString() === selectedCardId}
                 id={item.id}
                 title={item.title}
                 text={item.text}
@@ -106,6 +122,6 @@ function PodcastsMain() {
       </span>
     </div>
   );
-}
+};
 
 export default PodcastsMain;

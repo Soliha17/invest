@@ -18,6 +18,7 @@ function EcoCard({
   podcastTime,
   cardHover,
   setCardHover,
+  onClick,
 }: IProps) {
   return (
     <div
@@ -30,6 +31,7 @@ function EcoCard({
       <span className="top__podcast-card">
         <img
           src={img}
+          onClick={onClick}
           style={{
             padding: cardHover === id ? "10px 3px 5px 3px" : "0",
             width: "309px",

@@ -10,12 +10,21 @@ import closeIcon from "../../assets/icons/close-icon.svg";
 import watchIcon from "../../assets/icons/small-watch-icon.svg";
 import smallDateIcon from "../../assets/icons/small-date-icon.svg";
 
-function PlayerMenu() {
+interface PodcastMenuProps {
+  handleClose: () => void;
+}
+
+const PlayerMenu: React.FC<PodcastMenuProps> = ({ handleClose }) => {
   return (
     <div className="player-info">
       <span className="login__header">
         <span className="content__login">
-          <img src={closeIcon} className="close-icon" alt="close icon" />
+          <img
+            src={closeIcon}
+            onClick={handleClose}
+            className="close-icon"
+            alt="close icon"
+          />
           <span className="profile-info__login">
             <span className="camere-group flex">
               <h3 className="font-style__1619">Albom</h3>
@@ -124,6 +133,6 @@ function PlayerMenu() {
       </span>
     </div>
   );
-}
+};
 
 export default PlayerMenu;

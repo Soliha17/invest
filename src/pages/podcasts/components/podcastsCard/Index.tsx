@@ -2,11 +2,6 @@ import React, { useState } from "react";
 
 import "./style.scss";
 
-import {
-  PodcastsCardData,
-  podcastsCardDatas,
-} from "../../../../mock/podcastsCardDatas";
-
 import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";
 import smallShareIcon from "../../../../assets/icons/small-share-icon.svg";
@@ -20,6 +15,8 @@ export interface IProps {
   img: any;
   cardHover: number;
   setCardHover: Function;
+  onClick: () => void
+  selected:boolean,
 }
 
 function PodcastsCard({
@@ -30,6 +27,7 @@ function PodcastsCard({
   podcastTime,
   cardHover,
   setCardHover,
+  onClick,
 }: IProps) {
 
   return (
@@ -44,6 +42,7 @@ function PodcastsCard({
         <img
           src={img}
           alt="podcast img"
+          onClick={onClick}
           style={{
             padding: cardHover === id ? "10px 3px 5px 3px" : "0",
             width: "309px",

@@ -9,7 +9,15 @@ import Sidebar from "../../../components/sidebar/Index";
 import PodcastsFeed from "../components/podcastsFeed/Index";
 import PodcastMenu from "../components/podcastMenu/Index";
 
-function ItPodcast() {
+interface MainProps {
+  handleCardClick: (id: string) => void;
+  selectedCardId: string | null;
+}
+
+const ItPodcast: React.FC<MainProps> = ({
+  handleCardClick,
+  selectedCardId,
+}) => {
   const [cardHover, setCardHover] = useState<number>(0);
 
   return (
@@ -42,6 +50,8 @@ function ItPodcast() {
                 {podcastsCardItDatas.map((item, index) => (
                   <React.Fragment key={item.id}>
                     <PodcastsCard
+                      onClick={() => handleCardClick(item.id.toString())}
+                      selected={item.id.toString() === selectedCardId}
                       id={index}
                       title={item.title}
                       text={item.text}
@@ -60,6 +70,6 @@ function ItPodcast() {
       </div>
     </div>
   );
-}
+};
 
 export default ItPodcast;
