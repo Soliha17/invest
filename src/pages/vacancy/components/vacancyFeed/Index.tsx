@@ -9,16 +9,25 @@ import dateIcon from "../../../../assets/icons/date-icon.svg";
 
 import "./style.scss";
 
-function VacancyFeed() {
+interface Props {
+  visibility: boolean;
+  toggleVisibility: () => void;
+}
+
+const VacancyFeed: React.FC<Props> = ({ visibility, toggleVisibility }) => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
   return (
     <div className="vacancy-feed flex">
-      <h1 className="f-3441">Vakansiyalar lentasi</h1>
+      <h1 className="font-style__3441">Vakansiyalar lentasi</h1>
       <span className="action-group__vacancy-feed flex">
         <span className="action-box__vacancy-feed flex">
           <span className="action-box__icon">
-            <img src={settingIcon} alt="actions icon" />
+            <img
+              src={settingIcon}
+              onClick={toggleVisibility}
+              alt="actions icon"
+            />
           </span>
         </span>
         <span className="action-box__vacancy-feed flex">
@@ -42,6 +51,6 @@ function VacancyFeed() {
       </span>
     </div>
   );
-}
+};
 
 export default VacancyFeed;

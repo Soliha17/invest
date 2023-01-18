@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style.scss";
+import "../podcastsCard/style.scss";
 
 import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";

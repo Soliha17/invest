@@ -24,7 +24,7 @@
       &:nth-child(2) {
         display: inline-block;
         position: relative;
-        .calendar-container { 
+        .calendar-container {
           position: absolute;
           top: 40px;
           right: -205px;
@@ -34,3 +34,9 @@
     }
   }
 }
+// @media (max-width: 1130px) {
+//   .events-feed {
+//     max-width: 100% !important;
+//     width: 100% !important;
+//   }
+// }

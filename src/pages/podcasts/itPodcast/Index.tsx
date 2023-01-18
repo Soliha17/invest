@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useSidebar } from "../../../hooks/UseSidebar";
 import "./style.scss";
 
 import PodcastsCard from "../components/podcastsCard/Index";
@@ -19,13 +19,21 @@ const ItPodcast: React.FC<MainProps> = ({
   selectedCardId,
 }) => {
   const [cardHover, setCardHover] = useState<number>(0);
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+ const [visibility, setVisibility] = React.useState(true);
 
+ const toggleVisibility = () => {
+   setVisibility(!visibility);
+ };
   return (
     <div className="wrapper">
       <div className="main">
-        <Sidebar />
+        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full podcast-full">
-          <PodcastsFeed />
+          <PodcastsFeed
+            visibility={visibility}
+            toggleVisibility={toggleVisibility}
+          />
           <div className="main-inner">
             <div className="podcasts-main">
               <span className="top__podcasts-main">
@@ -64,7 +72,10 @@ const ItPodcast: React.FC<MainProps> = ({
                 ))}
               </span>
             </div>
-            <PodcastMenu />
+            <PodcastMenu
+              visibility={visibility}
+              toggleVisibility={toggleVisibility}
+            />
           </div>
         </div>
       </div>

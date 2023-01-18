@@ -8,8 +8,11 @@ import savedIcon from "../../../../assets/icons/saved-icon.svg";
 import dateIcon from "../../../../assets/icons/date-icon.svg";
 
 import "./style.scss";
-
-function VolunteerFeed() {
+interface Props {
+  visibility: boolean;
+  toggleVisibility: () => void;
+}
+const VolunteerFeed: React.FC<Props> = ({ visibility, toggleVisibility }) => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
 
@@ -19,7 +22,11 @@ function VolunteerFeed() {
       <span className="action-group__events-feed flex">
         <span className="action-box flex">
           <span className="icon__action-box">
-            <img src={settingIcon} alt="actions icon" />
+            <img
+              src={settingIcon}
+              onClick={toggleVisibility}
+              alt="actions icon"
+            />
           </span>
         </span>
         <span className="action-box flex">
@@ -43,6 +50,6 @@ function VolunteerFeed() {
       </span>
     </div>
   );
-}
+};
 
 export default VolunteerFeed;

@@ -8,6 +8,9 @@
   width: 272px;
   height: fit-content;
   background: $white;
+  .close-menu {
+    display: none;
+  }
   h3 {
     font-weight: 500;
     margin-bottom: 10px;
@@ -37,6 +40,44 @@
     margin-top: 20px;
     .bottom__box-direction {
       margin-top: 20px;
+    }
+  }
+}
+.podcast-menu.show {
+  display: flex;
+}
+.podcast-menu.hide {
+  display: none;
+}
+
+@media (max-width: 1130px) {
+  .podcast-menu {
+    background: $lightgrey;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .menu__content {
+      height: 581px;
+      background: $white !important;
+    }
+    .close-menu {
+      background: $green;
+      display: block;
+      position: absolute;
+      top: -70px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      font-size: 50px;
+      z-index: 77;
     }
   }
 }

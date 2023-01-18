@@ -1,12 +1,19 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
+import closeMenu from "../../../../assets/icons/setting-icons.svg";
 import "./style.scss";
-
-function PodcastMenu() {
+interface Props {
+  visibility: boolean;
+  toggleVisibility: () => void;
+}
+const PodcastMenu: React.FC<Props> = ({ visibility, toggleVisibility }) => {
   const location = useLocation();
   return (
-    <div className="podcast-menu">
+    <div className={`podcast-menu ${visibility ? "show" : "hide"}`}>
+      <div onClick={toggleVisibility} className="close-menu">
+        <img src={closeMenu} alt="close menu" />
+      </div>
       <span className="direction-box__menu box-direction">
         <h3 className="font-style__2024">Kategoriyalar</h3>
         <span className="top__box-direction">
@@ -54,6 +61,6 @@ function PodcastMenu() {
       </span>
     </div>
   );
-}
+};
 
 export default PodcastMenu;

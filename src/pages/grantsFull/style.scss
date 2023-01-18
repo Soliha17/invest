@@ -1,6 +1,6 @@
 @import "../../sass/variables";
 
-.grants-full{
+.grants-full {
   padding-bottom: 151px;
   .top__grants-full {
     gap: 20px;
@@ -69,6 +69,49 @@
           gap: 5px;
           margin-right: 40px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1130px) {
+  .top__grants-full {
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .grants-card {
+    width: 924px !important;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+
+    .grants-card__img {
+      width: 100% !important;
+    }
+  }
+}
+@media (max-width: 1030px) {
+  .grants-card {
+    width: 100% !important;
+    .grants-card__middle p {
+      width: 100% !important;
+    }
+  }
+}
+@media (max-width: 830px) {
+  .grants-card {
+    width: 100% !important;
+  }
+}
+@media (max-width: 430px) {
+  .grants-full {
+    .footer__grants-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+      .right__footer {
+        align-self: end;
       }
     }
   }

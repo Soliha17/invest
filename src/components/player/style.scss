@@ -54,3 +54,27 @@
 .rhap_footer {
   margin-top: 13px;
 }
+@media (max-width: 1530px) {
+  .player-container {
+    width: 100%;
+  }
+}
+@media (max-width: 530px) {
+  .player-container {
+    .listent-info-container {
+      img {
+        width: 70px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .player-container {
+     .rhap_container{
+      gap: 10px;
+    }
+  }
+}

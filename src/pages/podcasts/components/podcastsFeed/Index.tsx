@@ -8,18 +8,25 @@ import savedIcon from "../../../../assets/icons/saved-icon.svg";
 import dateIcon from "../../../../assets/icons/date-icon.svg";
 
 import "./style.scss";
-
-function PodcastsFeed() {
+interface Props {
+  visibility: boolean;
+  toggleVisibility: () => void;
+}
+const PodcastsFeed: React.FC<Props> = ({ visibility, toggleVisibility }) => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
 
   return (
     <div className="events-feed flex">
-      <h1 className="f-3441">Volontyorlik</h1>
+      <h1 className="f-3441">Podcastlar</h1>
       <span className="action-group__events-feed flex">
         <span className="action-box flex">
           <span className="icon__action-box">
-            <img src={settingIcon} alt="actions icon" />
+            <img
+              src={settingIcon}
+              onClick={toggleVisibility}
+              alt="actions icon"
+            />
           </span>
         </span>
         <span className="action-box flex">
@@ -43,6 +50,6 @@ function PodcastsFeed() {
       </span>
     </div>
   );
-}
+};
 
 export default PodcastsFeed;

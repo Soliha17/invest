@@ -5,12 +5,15 @@
   flex-direction: column;
   gap: 20px;
   max-width: 767px;
+
   .comment {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     .top__comment {
       gap: 5px;
+
       .profile-info {
         h6 {
           color: $black;
@@ -21,11 +24,13 @@
         }
       }
     }
+
     .middle__comment {
       p {
         color: $black;
       }
     }
+
     .bottom__comment {
       gap: 20px;
       p:first-child {
@@ -37,11 +42,14 @@
       }
     }
   }
+
   .no-comment {
     display: block;
+
     img {
       margin-top: 40px;
     }
+    
     h4 {
       margin-top: 66px;
       text-align: center;

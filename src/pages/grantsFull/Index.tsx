@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSidebar } from "../../hooks/UseSidebar";
+
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import "./style.scss";
@@ -19,11 +21,17 @@ import smallDateIcon from "../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 
 function GrantsFull() {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
   const [grants, setGrants] = useState<GrantsCardTypes[]>([]);
+  const [visibility, setVisibility] = React.useState(true);
 
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
   let result: GrantsCardTypes[] = grantsCardDatas.filter((item) => {
     return item.id === Number(id);
   });
@@ -38,7 +46,7 @@ function GrantsFull() {
 
   return (
     <div className="main wrapper">
-      <Sidebar />
+      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full grants-full">
         <span className="top__grants-full flex">
           <span className="back-group flex" onClick={goBack}>
@@ -46,7 +54,10 @@ function GrantsFull() {
               <img src={backIcon} alt="back icon" />
             </span>
           </span>
-          <GrantsFeed />
+          <GrantsFeed
+            visibility={visibility}
+            toggleVisibility={toggleVisibility}
+          />
         </span>
         <div className="grants-card">
           {grants.map((info) => (
@@ -79,7 +90,11 @@ function GrantsFull() {
               </p>
               <span className="grants-card__middle">
                 <p className="font-style__2431">{info.text}</p>
-                <img src={info.img} alt="oxford img" />
+                <img
+                  src={info.img}
+                  className="grants-card__img"
+                  alt="oxford img"
+                />
               </span>
               <span className="footer__grants-card flex">
                 <span className="left__footer flex">

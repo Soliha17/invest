@@ -21,6 +21,46 @@
         margin-left: 5px;
         color: $black;
       }
+      &:nth-child(2) {
+        display: inline-block;
+        position: relative;
+        .calendar-container {
+          position: absolute;
+          top: 40px;
+          right: -205px;
+          z-index: 999;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1130px) {
+  .grants-feed {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 830px) {
+  .grants-feed {
+    width: 100%;
+  }
+}
+@media (max-width: 620px) {
+  .calendar-container {
+    right: -70px !important;
+  }
+  .grants-feed {
+    padding: 10px;
+    .action-group__grants-feed {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .grants-feed{
+    h1{
+      font-size: 21px;
     }
   }
 }

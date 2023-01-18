@@ -73,7 +73,7 @@
       }
     }
   }
-  .font-style__3441{
+  .font-style__3441 {
     margin-top: 40px;
   }
   .same-cards-container {
@@ -139,5 +139,116 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1500px) {
+  .events-full {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .events-full__card {
+      align-self: center;
+      justify-self: center;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media (max-width: 1300px) {
+  .events-full {
+    width: 100% !important;
+
+    .same-cards-container {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      .same-cards {
+        min-width: none;
+        width: 100%;
+        justify-content: center !important;
+        margin: 0 auto;
+        margin-right: 0;
+        .same-card {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1130px) {
+  .events-full .events-full__card .bottom__event-card {
+    width: 90% !important;
+  }
+  .events-full .events-full__card {
+    width: 95% !important;
+  }
+  .events-full__card .top__event-card .img-group__event-card {
+    img {
+      // max-width: 960px;
+      width: 100%;
+      // height: auto;
+      // height: 300px !important;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .events-full__card .top__event-card .img-group__event-card {
+    img {
+      width: 100%;
+      max-width: 760px;
+      height: auto;
+      // height: 300px !important;
+    }
+  }
+  .events-full .events-full__card .top__event-card .data-group__event-card {
+    margin-bottom: 0 !important;
+  }
+  .events-full .events-full__card .top__event-card .img-group__event-card {
+    margin-bottom: 0 !important;
+  }
+  .events-full .events-full__card .bottom__event-card {
+    width: 100% !important;
+  }
+  .same-card {
+    width: 40% !important;
+    .same-card__img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .events-full__card .top__event-card .img-group__event-card {
+    img {
+      height: 350px !important;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .events-full__card .top__event-card .img-group__event-card {
+    img {
+      height: 300px !important;
+    }
+  }
+  .same-card {
+    width: 300px !important;
+    width: 100%;
+    .same-card__img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .events-full__card .top__event-card .img-group__event-card {
+    img {
+      height: 230px !important;
+    }
+  }
+  .same-card {
+    // width: 300px !important;
+    width: 85% !important;
   }
 }

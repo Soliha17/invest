@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useSidebar } from "../../hooks/UseSidebar";
+
 
 import Sidebar from "../../components/sidebar/Index";
 
@@ -24,6 +26,8 @@ import backIcon from "../../assets/icons/back-icon.svg";
 import Comments from "../../components/comments/Index";
 
 function NewsFull() {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
@@ -48,7 +52,7 @@ function NewsFull() {
   return (
     <>
       <div className="main wrapper">
-        <Sidebar />
+        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full">
           <div className="news-main news-full-main">
             <span className="back-group" onClick={goBack}>
@@ -144,7 +148,7 @@ function NewsFull() {
                 placeholder="Izoh qoldirish ..."
               ></textarea>
               <button className="send-btn font-style__1619">Yuborish</button>
-              <Comments/>
+              <Comments />
             </span>
           </div>
         </div>

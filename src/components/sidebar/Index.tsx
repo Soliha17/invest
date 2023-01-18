@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+// import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -9,10 +10,18 @@ import {
   sidebarSocialImages,
 } from "../../mock/sidebarLinksDatas";
 
-function Sidebar() {
+interface SidebarProps {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+}
+
+const Sidebar: React.FunctionComponent<SidebarProps> = ({
+  isOpen,
+  toggleSidebar,
+}) => {
   let location = useLocation();
 
-  return (
+  return isOpen ? (
     <div className="sidebar flex">
       <span className="sidebar__links flex">
         {sidebarLinks.map((item) => (
@@ -66,7 +75,7 @@ function Sidebar() {
         </span>
       </span>
     </div>
-  );
-}
+  ) : null;
+};
 
 export default Sidebar;

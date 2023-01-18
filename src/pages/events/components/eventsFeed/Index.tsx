@@ -9,7 +9,12 @@ import dateIcon from "../../../../assets/icons/date-icon.svg";
 
 import "./style.scss";
 
-function EventsFeed() {
+interface Props {
+  visibility: boolean;
+  toggleVisibility: () => void;
+}
+
+const EventsFeed: React.FC<Props> = ({ visibility, toggleVisibility }) => {
   const [openCalendar, setOpenCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
 
@@ -19,7 +24,11 @@ function EventsFeed() {
       <span className="action-group__events-feed flex">
         <span className="action-box flex">
           <span className="icon__action-box">
-            <img src={settingIcon} alt="actions icon" />
+            <img
+              src={settingIcon}
+              onClick={toggleVisibility}
+              alt="actions icon"
+            />
           </span>
         </span>
         <span className="action-box flex">
@@ -31,9 +40,7 @@ function EventsFeed() {
             />
           </span>
           <div className="calendar-container">
-            {openCalendar && (
-              <Calendar onChange={onChange} value={value}  />
-            )}
+            {openCalendar && <Calendar onChange={onChange} value={value} />}
           </div>
         </span>
         <span className="action-box flex">
@@ -45,7 +52,7 @@ function EventsFeed() {
       </span>
     </div>
   );
-}
+};
 // <img
 //   src={cc}
 //   alt="actions icon"

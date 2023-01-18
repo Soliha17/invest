@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -18,6 +19,7 @@ import Modal from "../../components/modal/Index";
 import SuccessModal from "../../components/successModal/Index";
 
 function EventsFull() {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
   const navigate = useNavigate();
   const { id } = useParams();
   const [events, setEvents] = useState<EventsCardData[]>([]);
@@ -40,7 +42,7 @@ function EventsFull() {
   };
   return (
     <div className="main wrapper">
-      <Sidebar />
+      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full events-full-container">
         <div className="back-group flex" onClick={goBack}>
           <span className="back-icon">
@@ -105,7 +107,7 @@ function EventsFull() {
             <span className="same-cards">
               {sameEventCardDatas.map((item) => (
                 <span className="same-card">
-                  <img src={item.img} alt={item.title} />
+                  <img className="same-card__img" src={item.img} alt={item.title} />
                   <span className="info__same-card">
                     <h5 className="font-style__2024">{item.title}</h5>
                     <p className="font-style__1417">{item.type}</p>

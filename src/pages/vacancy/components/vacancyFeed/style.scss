@@ -34,3 +34,34 @@
     }
   }
 }
+@media (max-width: 1130px) {
+  .vacancy-feed {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 830px) {
+  .vacancy-feed {
+    width: 100% !important;
+  }
+  .vacancy-feed .action-group__vacancy-feed .action-box__vacancy-feed p{
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .vacancy-feed {
+    padding: 10px;
+    .action-group__vacancy-feed {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .vacancy-feed{
+    h1{
+      font-size: 21px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, MouseEvent } from "react";
+import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -12,6 +13,8 @@ import PlayerMenu from "../../components/playerMenu/Index";
 interface WrapperProps {}
 
 const Podcasts: React.FC<WrapperProps> = () => {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+  const [visibility, setVisibility] = React.useState(true);
   const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
 
   const handleCardClick = (id: string) => {
@@ -21,13 +24,18 @@ const Podcasts: React.FC<WrapperProps> = () => {
   const handleClose = () => {
     setSelectedCardId(null);
   };
-
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
   return (
     <div className="wrapper podcast-wrapper">
       <div className="main podcast-main">
-        <Sidebar />
+        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full podcast-full">
-          <PodcastsFeed />
+          <PodcastsFeed
+            visibility={visibility}
+            toggleVisibility={toggleVisibility}
+          />
           <div className="main-inner">
             <PodcastsMain
               handleCardClick={handleCardClick}
@@ -36,7 +44,10 @@ const Podcasts: React.FC<WrapperProps> = () => {
             {selectedCardId !== null && (
               <PlayerMenu handleClose={handleClose} />
             )}
-            <PodcastMenu />
+            <PodcastMenu
+              visibility={visibility}
+              toggleVisibility={toggleVisibility}
+            />
           </div>
         </div>
       </div>

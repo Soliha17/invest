@@ -1,4 +1,5 @@
 @import "../../sass/variables.scss";
+
 .sidebar {
   position: fixed;
   width: 253px;
@@ -17,6 +18,7 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
   .active-link {
     margin-left: -15px;
     padding: 17px 0 16px 20px;
@@ -89,6 +91,70 @@
       display: flex;
       align-items: center;
       gap: 7px;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .sidebar {
+    background: $lightgrey;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-left: 50px;
+    z-index: 9999;
+    height: auto;
+  }
+}
+@media (width <=1130px) {
+  .sidebar {
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    max-height: 100%;
+    align-items: center;
+    text-align: center !important;
+    .active-link {
+      margin-left: 0;
+      padding: 0;
+      background: none;
+      box-shadow: none;
+      p {
+        padding-bottom: 5px;
+        border-bottom: 3px solid $green;
+      }
+    }
+    .sidebar__links {
+      gap: 25px;
+      text-align: center;
+      // align-items: center !important;
+      align-items: baseline;
+
+      // align-content: center;
+      // align-self: center;
+      width: 250px;
+      margin: 0 auto;
+      .sidebar__link {
+        width: 50%;
+        align-self: center;
+        p {
+          text-align: center;
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+    .sidebar__pages {
+      display: none !important;
+    }
+    .sidebar__footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

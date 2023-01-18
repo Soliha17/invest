@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -16,6 +17,8 @@ import sendIcon from "../../assets/icons/send-icon.svg";
 import savedIcon from "../../assets/icons/saved-icon.svg";
 
 function VolunteerFull() {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [events, setEvents] = useState<EventsCardData[]>([]);
@@ -33,7 +36,7 @@ function VolunteerFull() {
   }
   return (
     <div className="main wrapper">
-      <Sidebar />
+      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full events-full-container">
         <div className="back-group flex" onClick={goBack}>
           <span className="back-icon">
@@ -90,7 +93,7 @@ function VolunteerFull() {
               </span>
             </span>
           ))}
-            <h1 className="font-style__3441">O‘xshash tadbirlar</h1>
+          <h1 className="font-style__3441">O‘xshash tadbirlar</h1>
           <div className="same-cards-container">
             <span className="same-cards">
               {sameEventCardDatas.map((item) => (

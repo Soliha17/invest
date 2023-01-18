@@ -55,8 +55,20 @@
     .content__podcasts-main {
       width: 100%;
       display: flex;
+      flex-wrap: wrap !important;
       align-items: center;
       justify-content: space-between;
+    }
+  }
+}
+@media (max-width: 830px) {
+  .podcasts-main {
+    width: 90% !important;
+    .top__podcasts-main {
+      max-width: 100%;
+      .content__podcasts-main {
+        width: 100% !important;
+      }
     }
   }
 }

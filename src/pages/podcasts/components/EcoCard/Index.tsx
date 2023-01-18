@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style.scss";
+import "../podcastsCard/style.scss";
 
 import { PodcastsCardData } from "../../../../mock/podcastsCardDatas";
 

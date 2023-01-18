@@ -1,20 +1,32 @@
 import React from "react";
+import { useSidebar } from "../../hooks/UseSidebar";
 
 import Sidebar from "../../components/sidebar/Index";
 import EventsFeed from "./components/volunteerFeed/Index";
 import Menu from "../../components/menu/Index";
 import EventsMain from "./components/volunteerMain/Index";
+import VolunteerFeed from "./components/volunteerFeed/Index";
+import VolunteerMain from "./components/volunteerMain/Index";
 
 function Volunteer() {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+  const [visibility, setVisibility] = React.useState(true);
+
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
   return (
     <div className="wrapper">
       <div className="main">
-        <Sidebar />
+        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full">
-          <EventsFeed />
+          <VolunteerFeed
+            visibility={visibility}
+            toggleVisibility={toggleVisibility}
+          />
           <div className="main-inner">
-            <EventsMain />
-            <Menu />
+            <VolunteerMain />
+            <Menu visibility={visibility} toggleVisibility={toggleVisibility} />
           </div>
         </div>
       </div>

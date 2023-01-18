@@ -81,3 +81,24 @@
     }
   }
 }
+@media (max-width: 920px) {
+  .news-card{
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      max-width: 100%;
+    }
+  }
+  .news-card .text__news-card h4{
+    padding-right: 0;
+  }
+  .news-card .text__news-card p{
+    padding-right: 0;
+  }
+}
+@media (max-width: 620px) {
+  .news-card{
+    max-width: 100%;
+  }
+}

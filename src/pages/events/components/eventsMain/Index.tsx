@@ -2,6 +2,8 @@ import React from "react";
 import EventsCard from "../eventsCard/Index";
 import { eventsCardDatas } from "../../../../mock/eventsCardDatas";
 
+import "./style.scss";
+
 function EventsMain() {
   return (
     <div className="events-main">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -20,14 +21,20 @@ import Menu from "../../components/menu/Index";
 import Modal from "../../components/modal/Index";
 import SuccessModal from "../../components/successModal/Index";
 
-function VacancyFull() {
+const VacancyFull: React.FC = () => {
+  const { sidebarOpen, toggleSidebar } = useSidebar();
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [modal1Open, setModal1Open] = useState(false);
   const [modal2Open, setModal2Open] = useState(false);
   const [dots, setDots] = useState(false);
   const [vacancy, setVacancy] = useState<VacancyCardTypes[]>([]);
+  const [visibility, setVisibility] = React.useState(false);
 
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
   let result = vacancyCards.filter((item) => {
     return item.id === Number(id);
   });
@@ -45,7 +52,7 @@ function VacancyFull() {
   };
   return (
     <div className="main wrapper">
-      <Sidebar />
+      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full">
         <span className="back-group" onClick={goBack}>
           <img src={backIcon} alt="back icon" />
@@ -147,7 +154,7 @@ function VacancyFull() {
               </span>
             ))}
           </div>
-          <Menu />
+          <Menu visibility={visibility} toggleVisibility={toggleVisibility} />
         </span>
       </div>
       {modal1Open && (
@@ -165,6 +172,6 @@ function VacancyFull() {
       />
     </div>
   );
-}
+};
 
 export default VacancyFull;

@@ -52,7 +52,7 @@ function GrantsCard({
         <p className="grants-card__type font-style__1619">{grantsType}</p>
         <span className="grants-card__middle" onClick={() => onSelect(id)}>
           <p className="font-style__2431">{text}</p>
-          <img src={img} alt="oxford img" />
+          <img src={img} className="grants-card__img" alt="oxford img" />
         </span>
         <span className="footer__grants-card flex">
           <span className="left__footer flex">

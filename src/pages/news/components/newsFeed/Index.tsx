@@ -7,7 +7,7 @@ import { newsFeedLinks } from "../../../../mock/newsFeedDatas";
 function NewsFeed() {
   return (
     <div className="news-feed">
-      <h1 className="f-3441">Yangiliklar lentasi</h1>
+      <h1 className="font-style__3441">Yangiliklar lentasi</h1>
       <span className="action-group__news-feed">
         {newsFeedLinks.map((item) => (
           <Link className="action-box__news-feed" key={item.id} to={""}>
