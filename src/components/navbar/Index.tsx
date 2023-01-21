@@ -27,6 +27,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
               src={imagePath.menuIcon}
               alt="menu-icon"
               onClick={toggleSidebar}
+              className="hamburger-menu"
             />
             <img src={imagePath.investLogo} alt="invest hub logo" />
           </div>
@@ -69,7 +70,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
               </div>
 
               <div className="header-section__actions-login">
-                <button className="font-style__1619" onClick={onChange}>
+                <button className="font-style__1619 enter-group" onClick={onChange}>
                   <img src={imagePath.userIcon} alt="user icon" />
                   <div className="enter">Kirish</div>
                 </button>

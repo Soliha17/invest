@@ -22,6 +22,10 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      .hamburger-menu:hover {
+        filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
+          brightness(95%) contrast(101%);
+      }
     }
 
     .inner-wrapper {
@@ -109,6 +113,16 @@
       &-login {
         position: relative;
 
+        .enter-group:hover {
+          img {
+            filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
+              brightness(95%) contrast(101%);
+          }
+          .enter {
+            color: $green;
+          }
+        }
+
         button {
           display: flex;
           align-items: center;
@@ -130,6 +144,10 @@
             position: absolute;
             top: 10px;
             right: 10px;
+            &:hover {
+              filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
+                brightness(95%) contrast(101%);
+            }
           }
 
           &__user {
@@ -173,6 +191,16 @@
 
                 p {
                   color: #000;
+                }
+
+                &:hover {
+                  img {
+                    filter: invert(34%) sepia(93%) saturate(677%)
+                      hue-rotate(100deg) brightness(95%) contrast(101%);
+                  }
+                  p{
+                    color: $green;
+                  }
                 }
               }
 

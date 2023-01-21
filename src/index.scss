@@ -72,12 +72,12 @@ button,
 img {
   cursor: pointer;
 }
-img {
-  &:hover {
-    filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
-      brightness(95%) contrast(101%);
-  }
-}
+// img {
+//   &:hover {
+//     filter: invert(34%) sepia(93%) saturate(677%) hue-rotate(100deg)
+//       brightness(95%) contrast(101%);
+//   }
+// }
 input {
   outline: none;
 }
