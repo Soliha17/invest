@@ -1,5 +1,8 @@
 import React from "react";
+import Select from "react-select";
 import { useLocation } from "react-router-dom";
+
+import { countryOptions, cityOptions } from "../../utils/MenuSelect";
 
 import closeMenu from "../../assets/icons/setting-icons.svg";
 
@@ -18,26 +21,38 @@ const Menu: React.FC<Props> = ({ visibility, toggleVisibility }) => {
       </div>
       <div className="menu__content">
         <h3 className="font-style__2024">Hudud</h3>
-        <form>
-          <select className="select__menu">
-            <option value="viloyat">Viloyatni tanlang</option>
-            <option value="buxoro">Buxoro</option>
-            <option value="samarqand">Samarqand</option>
-            <option value="toshkent">Toshkent</option>
-            <option value="sirdaryo">Sirdayo</option>
-            <option value="andijon">Andijon</option>
-          </select>
+        <form className="menu__select-form">
+          <Select
+            placeholder="Viloyatni tanlang"
+            options={countryOptions}
+            theme={(theme: any) => ({
+              ...theme,
+              borderRadius: 0,
+              colors: {
+                ...theme.colors,
+
+                primary25: "#d8e0e7",
+                primary: "#008b34",
+              },
+            })}
+          />
         </form>
         <h4 className="font-style__1619">Tuman/shahar</h4>
-        <form>
-          <select className="select__menu">
-            <option value="viloyat">Shaharni tanlang</option>
-            <option value="buxoro">Buxoro</option>
-            <option value="samarqand">Samarqand</option>
-            <option value="toshkent">Toshkent</option>
-            <option value="sirdaryo">Sirdayo</option>
-            <option value="andijon">Andijon</option>
-          </select>
+        <form className="menu__select-form">
+          <Select
+            placeholder="Shaharni tanlang"
+            options={cityOptions}
+            theme={(theme: any) => ({
+              ...theme,
+              borderRadius: 0,
+              colors: {
+                ...theme.colors,
+
+                primary25: "#d8e0e7",
+                primary: "#008b34",
+              },
+            })}
+          />
         </form>
         <span className="direction-box__menu box-direction">
           <h3 className="font-style__2024">Yo’nalish</h3>

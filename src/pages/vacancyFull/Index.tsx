@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSidebar } from "../../hooks/UseSidebar";
 
@@ -50,6 +50,18 @@ const VacancyFull: React.FC = () => {
   const closeModal1 = () => {
     setModal1Open(false);
   };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
   return (
     <div className="main wrapper">
       {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}

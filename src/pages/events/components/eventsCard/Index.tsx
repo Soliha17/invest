@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./style.scss";
@@ -25,9 +25,22 @@ function EventsCard({
 }: EventsCardData) {
   const navigate = useNavigate();
   const [dots, setDots] = useState(false);
+
   function handleDots() {
     setDots(!dots);
   }
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
 
   function onSelect(id: number) {
     navigate(`/events/${id}`);

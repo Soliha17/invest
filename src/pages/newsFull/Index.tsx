@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useSidebar } from "../../hooks/UseSidebar";
-
 
 import Sidebar from "../../components/sidebar/Index";
 
@@ -38,10 +37,6 @@ function NewsFull() {
     return item.id === Number(id);
   });
 
-  useEffect(() => {
-    setNews(result);
-  }, []);
-
   function openCommentsFn() {
     setOpenComments(!openComments);
   }
@@ -49,6 +44,19 @@ function NewsFull() {
   function goBack() {
     navigate(-1);
   }
+
+  useEffect(() => {
+    setNews(result);
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
   return (
     <>
       <div className="main wrapper">

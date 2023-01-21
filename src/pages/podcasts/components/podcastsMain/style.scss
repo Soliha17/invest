@@ -9,6 +9,12 @@
   .top__podcasts-main {
     h3 {
       margin-bottom: 19px;
+      transition: all 0.5s linear;
+      cursor: pointer;
+      &:hover{
+        color: $green;
+        text-decoration: underline;
+      }
     }
     .content__podcasts-main {
       width: 696px;

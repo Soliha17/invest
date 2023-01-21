@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./style.scss";
 import { NewsCardData } from "../../../../mock/newsCardDatas";
@@ -31,6 +31,17 @@ function NewsCard({
   function onSelect(id: number) {
     navigate(`/news/${id}`);
   }
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
 
   return (
     <>

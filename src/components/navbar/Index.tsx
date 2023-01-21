@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useSidebar } from "../../hooks/UseSidebar";
 
@@ -17,6 +17,20 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
   function onChange() {
     setOpenProfileMenu(true);
   }
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(
+      ".header-section__actions-login"
+    );
+    if (!clickedElement) setOpenProfileMenu(false);
+  }, []);
 
   return (
     <>
@@ -70,7 +84,10 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
               </div>
 
               <div className="header-section__actions-login">
-                <button className="font-style__1619 enter-group" onClick={onChange}>
+                <button
+                  className="font-style__1619 enter-group"
+                  onClick={onChange}
+                >
                   <img src={imagePath.userIcon} alt="user icon" />
                   <div className="enter">Kirish</div>
                 </button>

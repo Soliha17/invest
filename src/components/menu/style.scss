@@ -6,9 +6,8 @@
   width: 272px;
   height: fit-content;
   background: $white;
-  .menu__content{
+  .menu__content {
     padding: 20px;
-
   }
   .close-menu {
     display: none;
@@ -25,9 +24,10 @@
     font-weight: 500;
     color: $black;
   }
-
-  .select__menu {
+  .menu__select-form {
     width: 192px;
+  }
+  .select__menu {
     height: 40px;
     border: 1px solid $onlyD;
     color: #8c8c8c;
@@ -73,7 +73,8 @@
       width: 50px;
       height: 50px;
       display: flex;
-      justify-content: center;align-items: center;
+      justify-content: center;
+      align-items: center;
       right: 0;
       font-size: 50px;
       z-index: 77;

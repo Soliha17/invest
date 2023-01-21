@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import { useSidebar } from "../../hooks/UseSidebar";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -43,6 +43,19 @@ function GrantsFull() {
   function goBack() {
     navigate(-1);
   }
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
+
 
   return (
     <div className="main wrapper">

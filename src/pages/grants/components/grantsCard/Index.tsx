@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.scss"
 import copyIcon from "../../../../assets/icons/copy-icon.svg";
@@ -23,6 +23,18 @@ function GrantsCard({
   function onSelect(id: number) {
     navigate(`/grants/${id}`);
   }
+
+   useEffect(() => {
+     document.addEventListener("click", handleClick);
+     return () => {
+       document.removeEventListener("click", handleClick);
+     };
+   }, []);
+
+   const handleClick = useCallback((event: any) => {
+     const clickedElement = event.target.closest(".three-dots");
+     if (!clickedElement) setDots(false);
+   }, []);
 
   return (
       <div className="grants-card" key={id}>
