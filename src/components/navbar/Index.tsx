@@ -65,11 +65,83 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                   <span>+</span>
                 </button>
                 <span className="language-dropdown">
-                  <select className="dropdown__header font-style__1619">
+                  <div className="select-box dropdown__header">
+                    <div className="select-box__current" tabIndex={1}>
+                      <div className="select-box__value">
+                        <input
+                          className="select-box__input"
+                          type="radio"
+                          id="0"
+                          value="1"
+                          name="Ben"
+                          checked
+                        />
+                        <p className="select-box__input-text font-style__1619">
+                          Ruscha
+                        </p>
+                      </div>
+                      <div className="select-box__value">
+                        <input
+                          className="select-box__input"
+                          type="radio"
+                          id="1"
+                          value="2"
+                          name="Ben"
+                          checked
+                        />
+                        <p className="select-box__input-text font-style__1619">
+                          Inglizcha
+                        </p>
+                      </div>
+                      <div className="select-box__value">
+                        <input
+                          className="select-box__input"
+                          type="radio"
+                          id="2"
+                          value="3"
+                          name="Ben"
+                          checked
+                        />
+                        <p className="select-box__input-text font-style__1619">
+                          O'zbekcha
+                        </p>
+                      </div>
+                    </div>
+                    <ul className="select-box__list">
+                      <li>
+                        <label
+                          className="select-box__option font-style__1619"
+                          htmlFor="0"
+                          aria-hidden
+                        >
+                          Ruscha
+                        </label>
+                      </li>
+                      <li>
+                        <label
+                          className="select-box__option font-style__1619"
+                          htmlFor="1"
+                          aria-hidden
+                        >
+                          Inglizcha
+                        </label>
+                      </li>
+                      <li>
+                        <label
+                          className="select-box__option font-style__1619"
+                          htmlFor="2"
+                          aria-hidden
+                        >
+                          O'zbekcha
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <select className="dropdown__header font-style__1619">
                     <option value="uz">O'zbekcha</option>
                     <option value="ru">Ruscha</option>
                     <option value="en">Inglizcha</option>
-                  </select>
+                  </select> */}
                   <select className="dropdown__header--short font-style__1619">
                     <option value="uz">Uz</option>
                     <option value="ru">Ru</option>
