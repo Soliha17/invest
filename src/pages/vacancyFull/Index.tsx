@@ -37,7 +37,7 @@ const VacancyFull: React.FC = () => {
 
   useEffect(() => {
     setVacancy(result);
-  });
+  }, [result]);
 
   function goBack() {
     navigate(-1);
