@@ -52,7 +52,7 @@ const VacancyFull: React.FC = () => {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  });
+  },[result]);
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");

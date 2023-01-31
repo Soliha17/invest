@@ -38,18 +38,19 @@ function NewsFull() {
     navigate(-1);
   }
 
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
+  
   useEffect(() => {
     setNews(result);
     document.addEventListener("click", handleClick);
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, [result]);
+  }, [result, handleClick]);
 
-  const handleClick = useCallback((event: any) => {
-    const clickedElement = event.target.closest(".three-dots");
-    if (!clickedElement) setDots(false);
-  }, []);
   return (
     <>
       <div className="main wrapper">
