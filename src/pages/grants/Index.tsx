@@ -1,5 +1,4 @@
 import React from "react";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import GrantsFeed from "./components/grantsFeed/Index";
 import GrantsMain from "./components/grantsMain/Index";

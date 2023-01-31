@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -19,7 +19,6 @@ import smallDateIcon from "../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 
 function GrantsFull() {
-
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -35,7 +34,7 @@ function GrantsFull() {
 
   useEffect(() => {
     setGrants(result);
-  }, []);
+  });
 
   function goBack() {
     navigate(-1);
@@ -46,13 +45,12 @@ function GrantsFull() {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  });
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");
     if (!clickedElement) setDots(false);
   }, []);
-
 
   return (
     <div className="main wrapper">

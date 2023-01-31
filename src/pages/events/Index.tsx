@@ -1,5 +1,4 @@
 import React from "react";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import EventsFeed from "./components/eventsFeed/Index";
 import Menu from "../../components/menu/Index";

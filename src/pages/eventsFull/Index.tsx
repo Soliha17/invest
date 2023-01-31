@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -29,7 +28,7 @@ function EventsFull() {
 
   useEffect(() => {
     setEvents(result);
-  });
+  }, [setEvents]);
 
   function goBack() {
     navigate(-1);
@@ -47,7 +46,7 @@ function EventsFull() {
         </div>
         <div className="events-full">
           {events.map((item) => (
-            <span className="events-full__card event-card">
+            <span className="events-full__card event-card" key={item.id}>
               <span className="top__event-card">
                 <span className="data-group__event-card">
                   <span className="left__data-group">
@@ -103,7 +102,11 @@ function EventsFull() {
             <span className="same-cards">
               {sameEventCardDatas.map((item) => (
                 <span className="same-card">
-                  <img className="same-card__img" src={item.img} alt={item.title} />
+                  <img
+                    className="same-card__img"
+                    src={item.img}
+                    alt={item.title}
+                  />
                   <span className="info__same-card">
                     <h5 className="font-style__2024">{item.title}</h5>
                     <p className="font-style__1417">{item.type}</p>

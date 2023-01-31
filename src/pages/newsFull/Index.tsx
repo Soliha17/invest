@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import { NewsCardData, newsCardDatas } from "../../mock/newsCardDatas";
 // import { commentsData } from "../../mock/commentsDatas";
@@ -45,7 +44,7 @@ function NewsFull() {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  });
+  },[setNews]);
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");
