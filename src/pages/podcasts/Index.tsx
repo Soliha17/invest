@@ -1,9 +1,7 @@
-import React, { useState, useEffect, MouseEvent } from "react";
-import { useSidebar } from "../../hooks/UseSidebar";
+import React, { useState } from "react";
 
 import "./style.scss";
 
-import Sidebar from "../../components/sidebar/Index";
 import PodcastsFeed from "./components/podcastsFeed/Index";
 import PodcastsMain from "./components/podcastsMain/Index";
 import PodcastMenu from "./components/podcastMenu/Index";
@@ -13,7 +11,6 @@ import PlayerMenu from "../../components/playerMenu/Index";
 interface WrapperProps {}
 
 const Podcasts: React.FC<WrapperProps> = () => {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
   const [visibility, setVisibility] = React.useState(true);
   const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
 
@@ -30,7 +27,6 @@ const Podcasts: React.FC<WrapperProps> = () => {
   return (
     <div className="wrapper podcast-wrapper">
       <div className="main podcast-main">
-        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full podcast-full">
           <PodcastsFeed
             visibility={visibility}

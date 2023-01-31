@@ -2,7 +2,6 @@ import React from "react";
 
 import "../podcastsCard/style.scss";
 
-import { PodcastsCardData } from "../../../../mock/podcastsCardDatas";
 
 import voiceIcon from "../../../../assets/icons/mickrophone-icon.svg";
 import smallHeartIcon from "../../../../assets/icons/small-heart-icon.svg";

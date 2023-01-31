@@ -53,15 +53,6 @@ const EventsFeed: React.FC<Props> = ({ visibility, toggleVisibility }) => {
     </div>
   );
 };
-// <img
-//   src={cc}
-//   alt="actions icon"
-//   onClick={() => setOpenCalendar(!openCalendar)}
-// />
-{
-  /* <div>
-  {openCalendar && <Calendar onChange={onChange} value={value} />}
-</div> */
-}
+
 
 export default EventsFeed;

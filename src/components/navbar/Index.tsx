@@ -23,7 +23,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  });
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(
@@ -74,7 +74,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                           id="0"
                           value="1"
                           name="Ben"
-                          checked
+                          defaultChecked
                         />
                         <p className="select-box__input-text font-style__1619">
                           Ruscha
@@ -87,7 +87,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                           id="1"
                           value="2"
                           name="Ben"
-                          checked
+                          defaultChecked
                         />
                         <p className="select-box__input-text font-style__1619">
                           Inglizcha
@@ -100,7 +100,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                           id="2"
                           value="3"
                           name="Ben"
-                          checked
+                          defaultChecked
                         />
                         <p className="select-box__input-text font-style__1619">
                           O'zbekcha

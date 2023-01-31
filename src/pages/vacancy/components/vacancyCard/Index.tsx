@@ -1,4 +1,4 @@
-import React, { useState,useCallback,useEffect } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./style.scss";
@@ -29,18 +29,18 @@ function VacancyCard({
     navigate(`/vacancy/${id}`);
   }
 
-   useEffect(() => {
-     document.addEventListener("click", handleClick);
-     return () => {
-       document.removeEventListener("click", handleClick);
-     };
-   }, []);
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
 
-   const handleClick = useCallback((event: any) => {
-     const clickedElement = event.target.closest(".three-dots");
-     if (!clickedElement) setDots(false);
-   }, []);
-  
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
+
   return (
     <>
       <span className="vacancy-card" key={id}>

@@ -38,6 +38,6 @@ export const sameEventCardDatas: SameEventCardData[] = [
     location: "Uzbekistan Hotel",
     date: "02.08.2022  ",
     time: "14:36",
-    img:sameImg1
+    img:sameImg3
   },
 ];

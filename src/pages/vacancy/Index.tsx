@@ -1,13 +1,10 @@
-import React, { useEffect,useState } from "react";
-import { useSidebar } from "../../hooks/UseSidebar";
+import React, { useState } from "react";
 
 import VacancyMain from "./components/vacancyMain/Index";
-import Sidebar from "../../components/sidebar/Index";
 import VacancyFeed from "./components/vacancyFeed/Index";
 import Menu from "../../components/menu/Index";
 
 const Vacancy: React.FC = () => {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
   const [visibility, setVisibility] = useState(true);
 
   const toggleVisibility = () => {
@@ -17,7 +14,6 @@ const Vacancy: React.FC = () => {
   return (
     <div className="wrapper">
       <div className="main">
-        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full">
           <VacancyFeed
             visibility={visibility}

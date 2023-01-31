@@ -4,8 +4,6 @@ import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
-import Sidebar from "../../components/sidebar/Index";
-
 import { EventsCardData, eventsCardDatas } from "../../mock/eventsCardDatas";
 import { sameEventCardDatas } from "../../mock/eventsSameCardDatas";
 
@@ -19,7 +17,6 @@ import Modal from "../../components/modal/Index";
 import SuccessModal from "../../components/successModal/Index";
 
 function EventsFull() {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
   const navigate = useNavigate();
   const { id } = useParams();
   const [events, setEvents] = useState<EventsCardData[]>([]);
@@ -32,7 +29,7 @@ function EventsFull() {
 
   useEffect(() => {
     setEvents(result);
-  }, []);
+  });
 
   function goBack() {
     navigate(-1);
@@ -42,7 +39,6 @@ function EventsFull() {
   };
   return (
     <div className="main wrapper">
-      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full events-full-container">
         <div className="back-group flex" onClick={goBack}>
           <span className="back-icon">

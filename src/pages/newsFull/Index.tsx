@@ -2,10 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useSidebar } from "../../hooks/UseSidebar";
 
-import Sidebar from "../../components/sidebar/Index";
-
 import { NewsCardData, newsCardDatas } from "../../mock/newsCardDatas";
-import { commentsData } from "../../mock/commentsDatas";
+// import { commentsData } from "../../mock/commentsDatas";
 
 import "./style.scss";
 
@@ -19,14 +17,10 @@ import savedIcon from "../../assets/icons/saved-icon.svg";
 import plusIcon from "../../assets/icons/kvd-plus-icon.svg";
 import threeDotsIcon from "../../assets/icons/three-dots-icon.svg";
 import watchIcon from "../../assets/icons/small-watch-icon.svg";
-import fullHeartIcon from "../../assets/icons/full-heart-icon.svg";
-import noComment from "../../assets/images/no-comment.svg";
 import backIcon from "../../assets/icons/back-icon.svg";
 import Comments from "../../components/comments/Index";
 
 function NewsFull() {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
-
   const navigate = useNavigate();
   const { id } = useParams();
   const [dots, setDots] = useState(false);
@@ -51,7 +45,7 @@ function NewsFull() {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  });
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");
@@ -60,7 +54,6 @@ function NewsFull() {
   return (
     <>
       <div className="main wrapper">
-        {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
         <div className="main-full">
           <div className="news-main news-full-main">
             <span className="back-group" onClick={goBack}>

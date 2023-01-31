@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import "./style.scss";
 
@@ -16,14 +15,11 @@ import savedIcon from "../../assets/icons/saved-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 import backIcon from "../../assets/icons/back-icon.svg";
 
-import Sidebar from "../../components/sidebar/Index";
 import Menu from "../../components/menu/Index";
 import Modal from "../../components/modal/Index";
 import SuccessModal from "../../components/successModal/Index";
 
 const VacancyFull: React.FC = () => {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
-
   const navigate = useNavigate();
   const { id } = useParams();
   const [modal1Open, setModal1Open] = useState(false);
@@ -41,7 +37,7 @@ const VacancyFull: React.FC = () => {
 
   useEffect(() => {
     setVacancy(result);
-  }, []);
+  });
 
   function goBack() {
     navigate(-1);
@@ -56,7 +52,7 @@ const VacancyFull: React.FC = () => {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  });
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");
@@ -64,7 +60,6 @@ const VacancyFull: React.FC = () => {
   }, []);
   return (
     <div className="main wrapper">
-      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full">
         <span className="back-group" onClick={goBack}>
           <img src={backIcon} alt="back icon" />

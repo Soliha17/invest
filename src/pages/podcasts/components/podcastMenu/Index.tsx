@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 import closeMenu from "../../../../assets/icons/setting-icons.svg";
 import "./style.scss";
@@ -8,7 +7,6 @@ interface Props {
   toggleVisibility: () => void;
 }
 const PodcastMenu: React.FC<Props> = ({ visibility, toggleVisibility }) => {
-  const location = useLocation();
   return (
     <div className={`podcast-menu ${visibility ? "show" : "hide"}`}>
       <div onClick={toggleVisibility} className="close-menu">

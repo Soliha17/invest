@@ -1,5 +1,4 @@
 import React, { useState, useEffect,useCallback } from "react";
-import { useSidebar } from "../../hooks/UseSidebar";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -15,13 +14,11 @@ import threeDotsIcon from "../../assets/icons/three-dots-icon.svg";
 import eyeIcon from "../../assets/icons/eye-icon.svg";
 import sendIcon from "../../assets/icons/send-icon.svg";
 import savedIcon from "../../assets/icons/saved-icon.svg";
-import Sidebar from "../../components/sidebar/Index";
 import backIcon from "../../assets/icons/back-icon.svg";
 import smallDateIcon from "../../assets/icons/small-date-icon.svg";
 import smallLocationIcon from "../../assets/icons/small-location-icon.svg";
 
 function GrantsFull() {
-  const { sidebarOpen, toggleSidebar } = useSidebar();
 
   const [dots, setDots] = useState(false);
   const navigate = useNavigate();
@@ -59,7 +56,6 @@ function GrantsFull() {
 
   return (
     <div className="main wrapper">
-      {/* <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> */}
       <div className="main-full grants-full">
         <span className="top__grants-full flex">
           <span className="back-group flex" onClick={goBack}>
