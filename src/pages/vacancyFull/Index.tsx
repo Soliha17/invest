@@ -57,7 +57,8 @@ const VacancyFull: React.FC = () => {
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");
     if (!clickedElement) setDots(false);
-  }, []);
+  }, [result]);
+
   return (
     <div className="main wrapper">
       <div className="main-full">

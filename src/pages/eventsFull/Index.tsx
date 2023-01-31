@@ -28,7 +28,7 @@ function EventsFull() {
 
   useEffect(() => {
     setEvents(result);
-  }, [setEvents]);
+  });
 
   function goBack() {
     navigate(-1);

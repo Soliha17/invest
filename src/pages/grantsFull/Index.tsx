@@ -34,7 +34,7 @@ function GrantsFull() {
 
   useEffect(() => {
     setGrants(result);
-  });
+  },[result]);
 
   function goBack() {
     navigate(-1);

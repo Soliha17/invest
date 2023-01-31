@@ -44,7 +44,7 @@ function NewsFull() {
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  },[setNews]);
+  });
 
   const handleClick = useCallback((event: any) => {
     const clickedElement = event.target.closest(".three-dots");

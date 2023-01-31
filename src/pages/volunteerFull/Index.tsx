@@ -24,7 +24,7 @@ function VolunteerFull() {
 
   useEffect(() => {
     setEvents(result);
-  });
+  },[result]);
 
   function goBack() {
     navigate(-1);
