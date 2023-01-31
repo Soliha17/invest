@@ -47,17 +47,17 @@ const VacancyFull: React.FC = () => {
     setModal1Open(false);
   };
 
+  const handleClick = useCallback((event: any) => {
+    const clickedElement = event.target.closest(".three-dots");
+    if (!clickedElement) setDots(false);
+  }, []);
+
   useEffect(() => {
     document.addEventListener("click", handleClick);
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  },[result]);
-
-  const handleClick = useCallback((event: any) => {
-    const clickedElement = event.target.closest(".three-dots");
-    if (!clickedElement) setDots(false);
-  }, [result]);
+  }, [result, handleClick]);
 
   return (
     <div className="main wrapper">
