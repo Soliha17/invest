@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Select from "react-select";
 import { useLocation } from "react-router-dom";
 
@@ -13,9 +13,15 @@ interface Props {
 }
 
 const Menu: React.FC<Props> = ({ visibility, toggleVisibility }) => {
+  const [showMenu, setShowMenu] = useState("menu");
   const location = useLocation();
+
+  useEffect(() => {
+    !visibility ? setShowMenu("menu menu--active") : setShowMenu("menu");
+  });
+
   return (
-    <div className={`menu ${visibility ? "show" : "hide"}`}>
+    <div className={showMenu}>
       <div onClick={toggleVisibility} className="close-menu">
         <img src={closeMenu} alt="close menu" />
       </div>

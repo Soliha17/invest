@@ -105,6 +105,11 @@
     padding-left: 50px;
     z-index: 9999;
     height: auto;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in;
+  }
+  .sidebar--active {
+    transform: translateX(0);
   }
 }
 @media (width <=1130px) {

@@ -61,6 +61,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    transform: translateX(100%);
+    transition: 0.3s ease-in;
     .menu__content {
       height: 581px;
       background: $white !important;
@@ -80,10 +82,12 @@
       z-index: 77;
     }
   }
+
+  .menu--active{
+     transform: translateX(0);
+  }
 }
-.menu.show {
-  display: flex;
-}
-.menu.hide {
-  display: none;
-}
+
+// .menu.hide {
+//   display: none;
+// }

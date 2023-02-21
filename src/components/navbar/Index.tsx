@@ -12,6 +12,7 @@ interface NavbarProps {}
 
 const Navbar: React.FunctionComponent<NavbarProps> = () => {
   const [openProfileMenu, setOpenProfileMenu] = useState(false);
+  const [showActions, setShowActions] = useState(false);
   const { sidebarOpen, toggleSidebar } = useSidebar();
 
   function onChange() {
@@ -20,6 +21,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
 
   useEffect(() => {
     document.addEventListener("click", handleClick);
+
     return () => {
       document.removeEventListener("click", handleClick);
     };
@@ -31,6 +33,10 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
     );
     if (!clickedElement) setOpenProfileMenu(false);
   }, []);
+
+  function handleActions() {
+    setShowActions(!showActions);
+  }
 
   return (
     <>
@@ -58,9 +64,19 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                 placeholder="Izlash..."
               />
             </div>
-            <div className="header-section__actions">
+            <div
+              className={`header-section__actions ${
+                showActions ? "header-section__actions--active" : ""
+              }`}
+            >
+              <p className="close-plus" onClick={handleActions}>
+                -
+              </p>
               <div className="actions-wrapper">
-                <button className="font-style__1619 header-section__actions-add">
+                <button
+                  className="font-style__1619 header-section__actions-add"
+                  onClick={handleActions}
+                >
                   <div>Joylashtirish</div>
                   <span>+</span>
                 </button>
@@ -137,11 +153,6 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                       </li>
                     </ul>
                   </div>
-                  {/* <select className="dropdown__header font-style__1619">
-                    <option value="uz">O'zbekcha</option>
-                    <option value="ru">Ruscha</option>
-                    <option value="en">Inglizcha</option>
-                  </select> */}
                   <select className="dropdown__header--short font-style__1619">
                     <option value="uz">Uz</option>
                     <option value="ru">Ru</option>
@@ -154,14 +165,14 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                   />
                 </span>
               </div>
-
+              {/* header-section__actions-login */}
               <div className="header-section__actions-login">
                 <button
                   className="font-style__1619 enter-group"
                   onClick={onChange}
                 >
                   <img src={imagePath.userIcon} alt="user icon" />
-                  <div className="enter">Kirish</div>
+                  <div className="enter font-style__1619">Kirish</div>
                 </button>
 
                 <div

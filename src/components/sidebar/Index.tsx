@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import { useSidebar } from "../../hooks/UseSidebar";
 
@@ -20,9 +20,16 @@ const Sidebar: React.FunctionComponent<SidebarProps> = ({
   toggleSidebar,
 }) => {
   let location = useLocation();
+  const [showSidebar, setShowSidebar] = useState("sidebar flex");
 
-  return isOpen ? (
-    <div className="sidebar flex">
+  useEffect(() => {
+    isOpen
+      ? setShowSidebar("sidebar flex")
+      : setShowSidebar("sidebar sidebar--active flex");
+  });
+
+  return (
+    <div className={showSidebar}>
       <span className="sidebar__links flex">
         {sidebarLinks.map((item) => (
           <Link
@@ -75,7 +82,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = ({
         </span>
       </span>
     </div>
-  ) : null;
+  );
 };
 
 export default Sidebar;
