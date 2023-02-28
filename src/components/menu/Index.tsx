@@ -18,7 +18,7 @@ const Menu: React.FC<Props> = ({ visibility, toggleVisibility }) => {
 
   useEffect(() => {
     !visibility ? setShowMenu("menu menu--active") : setShowMenu("menu");
-  });
+  },[visibility]);
 
   return (
     <div className={showMenu}>

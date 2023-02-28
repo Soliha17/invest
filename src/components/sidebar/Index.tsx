@@ -26,7 +26,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = ({
     isOpen
       ? setShowSidebar("sidebar flex")
       : setShowSidebar("sidebar sidebar--active flex");
-  });
+  },[isOpen]);
 
   return (
     <div className={showSidebar}>
