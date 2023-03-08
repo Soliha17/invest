@@ -1,18 +1,18 @@
-import Home from "../pages/home/Index";
-import Vacancy from "../pages/vacancy/Index";
-import VacancyFull from "../pages/vacancyFull/Index";
-import Events from "../pages/events/Index";
-import EventsFull from "../pages/eventsFull/Index";
-import Grants from "../pages/grants/Index";
-import GrantsFull from "../pages/grantsFull/Index";
-import News from "../pages/news/Index";
-import NewsFull from "../pages/newsFull/Index";
-import Volunteer from "../pages/volunteer/Index";
-import VolunteerFull from "../pages/volunteerFull/Index";
-import Podcasts from "../pages/podcasts/Index";
-import ItPodcast from "../pages/podcasts/itPodcast/Index";
-import Modal from "../components/modal/Index";
-import SuccessModal from "../components/successModal/Index";
+import Home from "../pages/home/Home";
+import Vacancy from "../pages/vacancy/Vacancy";
+import VacancyFull from "../pages/vacancyFull/VacancyFull";
+import Events from "../pages/events/Events";
+import EventsFull from "../pages/eventsFull/EventsFull";
+import Grants from "../pages/grants/Grants";
+import GrantsFull from "../pages/grantsFull/GrantsFull";
+import News from "../pages/news/News";
+import NewsFull from "../pages/newsFull/NewsFull";
+import Volunteer from "../pages/volunteer/Volunteer";
+import VolunteerFull from "../pages/volunteerFull/VolunteerFull";
+import Podcasts from "../pages/podcasts/Podcasts";
+import ItPodcast from "../pages/podcasts/itPodcast/ItPodcast";
+import Modal from "../components/modal/Modal";
+import SuccessModal from "../components/successModal/successModal";
 
 interface Utils {
   id: number;
